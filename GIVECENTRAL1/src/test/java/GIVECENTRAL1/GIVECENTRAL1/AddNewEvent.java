@@ -77,6 +77,7 @@ public class AddNewEvent {
         addpaymethod.selectByVisibleText("Visa - xxx4242 added on 2023-03-02 expiring on 2033-09-30");
         //add source code
         WebElement sourcecode = driver.findElement(By.cssSelector(".caret"));
+        js.executeScript("arguments[0].scrollIntoView();", sourcecode);
         sourcecode.click();
         WebElement clickonsourcecode = driver.findElement(By.xpath("//a[normalize-space()='110022 -']"));
         js.executeScript("arguments[0].scrollIntoView();", clickonsourcecode);

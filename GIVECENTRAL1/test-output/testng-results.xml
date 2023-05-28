@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-28T14:15:20 IST" name="Default suite" finished-at="2023-05-28T14:17:13 IST" duration-ms="113088">
+  <suite started-at="2023-05-28T20:50:51 IST" name="Default suite" finished-at="2023-05-28T20:52:18 IST" duration-ms="86842">
     <groups>
     </groups>
-    <test started-at="2023-05-28T14:15:20 IST" name="Default test" finished-at="2023-05-28T14:17:13 IST" duration-ms="113088">
-      <class name="GIVECENTRAL1.GIVECENTRAL1.GC_Profile">
-        <test-method signature="GCProfile()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.GC_Profile@49d904ec]" started-at="2023-05-28T14:15:20 IST" name="GCProfile" finished-at="2023-05-28T14:17:13 IST" duration-ms="113034" status="PASS">
+    <test started-at="2023-05-28T20:50:51 IST" name="Default test" finished-at="2023-05-28T20:52:18 IST" duration-ms="86842">
+      <class name="GIVECENTRAL1.GIVECENTRAL1.AddNewEvent">
+        <test-method signature="Add_New_Event()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.AddNewEvent@49d904ec]" started-at="2023-05-28T20:50:51 IST" name="Add_New_Event" finished-at="2023-05-28T20:52:18 IST" duration-ms="86783" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GCProfile -->
-      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.GC_Profile -->
+        </test-method> <!-- Add_New_Event -->
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.AddNewEvent -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
