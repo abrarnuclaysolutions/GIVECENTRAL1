@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GIVECENTRAL1.GIVECENTRAL1.AddNewEvent">
+      <class name="GIVECENTRAL1.GIVECENTRAL1.GC_Profile">
         <methods>
-          <include name="Add_New_Event"/>
+          <include name="GCProfile"/>
         </methods>
-      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.AddNewEvent -->
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.GC_Profile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

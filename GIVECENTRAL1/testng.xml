@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GIVECENTRAL">
+  <test thread-count="5" name="GIVECENTRAL">
+    <classes>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Crowdfounding_Event"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.GiveCentral_First"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Normal_Event"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.AddDonor"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Ticket_Event"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Pladged_Event"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Text_To_Engage_Report"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page2"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page1"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page4"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page3"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.AddNewEvent"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.GC_Profile"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Make_Guest_Payment"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Process_One_time_Payment"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Communication_File"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction"/>
+    </classes>
+  </test> <!-- GIVECENTRAL -->
+</suite> <!-- GIVECENTRAL -->
