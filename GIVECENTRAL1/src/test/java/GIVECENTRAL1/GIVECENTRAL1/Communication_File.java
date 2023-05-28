@@ -85,6 +85,7 @@ public class Communication_File {
         //enter email
         WebElement emaileElement = driver.findElement(By.xpath("//input[@id='search-input']"));
         emaileElement.sendKeys("abrar@nuclaysolutions.com");
+        Thread.sleep(2000);
         emaileElement.sendKeys(Keys.ENTER);
         // check on id
         Thread.sleep(5000);
@@ -157,7 +158,6 @@ public class Communication_File {
         btd.moveToElement(btdb).click().perform();
         
         //close driver
-        Thread.sleep(10000);
-        driver.close();
+
 	}
 }
