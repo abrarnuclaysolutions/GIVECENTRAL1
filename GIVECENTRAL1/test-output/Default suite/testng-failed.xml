@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page1">
+      <class name="GIVECENTRAL1.GIVECENTRAL1.AddNewEvent">
         <methods>
-          <include name="DynamicPage1"/>
+          <include name="Add_New_Event"/>
         </methods>
-      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page1 -->
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.AddNewEvent -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

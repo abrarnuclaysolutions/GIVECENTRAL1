@@ -68,7 +68,7 @@ public class AddNewEvent {
         WebElement selectdate = driver.findElement(By.cssSelector("#paymentStartDate"));
         selectdate.click();
         Thread.sleep(5000);
-        WebElement dayselect = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-today']"));
+        WebElement dayselect = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class='  ui-datepicker-today' or @class=' ui-datepicker-days-cell-over  ui-datepicker-today']"));
         dayselect.click();//currant date issue
         Actions std = new Actions(driver);
         //Add payment method
