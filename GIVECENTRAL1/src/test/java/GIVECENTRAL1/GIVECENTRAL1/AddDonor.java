@@ -1,6 +1,10 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -17,8 +21,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class AddDonor {
+@Listeners(com.utility.Listenerclass.class)
+public class AddDonor extends BaseClass {
 	WebDriver driver;
 	@Test
 	public void Add_Donor() throws InterruptedException {
@@ -109,7 +113,11 @@ public class AddDonor {
         popup.click();
         //close driver
         Thread.sleep(10000);
-        driver.close();
+//        driver.close();
         
+	}
+	@AfterMethod
+	public void cb() {
+		driver.close();
 	}
 }
