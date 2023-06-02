@@ -1,4 +1,7 @@
 package GIVECENTRAL1.GIVECENTRAL1;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -25,8 +28,8 @@ import org.openqa.selenium.support.ui.Select;
 // import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-public class GC_Profile { // It's create Pledge file. It has Wrong name.
+@Listeners(com.utility.Listenerclass.class)
+public class GC_Profile extends BaseClass { // It's create Pledge file. It has Wrong name.
 	WebDriver driver;
 	@Test
 	public void GCProfile() throws InterruptedException {
@@ -171,5 +174,9 @@ public class GC_Profile { // It's create Pledge file. It has Wrong name.
         Thread.sleep(10000);
 //        driver.close();
         
+	}
+	@AfterMethod
+	public void cb() {
+		driver.close();
 	}
 }

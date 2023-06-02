@@ -1,5 +1,9 @@
  package GIVECENTRAL1.GIVECENTRAL1;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -27,8 +31,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+@Listeners(com.utility.Listenerclass.class)
 
-public class Communication_File {
+public class Communication_File extends BaseClass {
 	WebDriver driver;
 	@Test
 	public void Comm_file() throws InterruptedException {
@@ -157,7 +162,10 @@ public class Communication_File {
         Actions btd = new Actions(driver);
         btd.moveToElement(btdb).click().perform();
         
-        //close driver
-
+        Thread.sleep(10000);
+	}
+	@AfterMethod
+	public void cb() {
+		driver.close();
 	}
 }

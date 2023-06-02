@@ -1,5 +1,8 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -23,8 +26,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-public class Ticket_Event {
+@Listeners(com.utility.Listenerclass.class)
+public class Ticket_Event extends BaseClass {
 	@Test
 	public void TicketEvent() throws InterruptedException {
 		ChromeOptions op = new ChromeOptions();
@@ -118,11 +121,15 @@ public class Ticket_Event {
 		submit.click();
 //		close driver
 		Thread.sleep(10000);
-		driver.close();
+//		driver.close();
 	}
 
 	static String usingRandomUUID() {
 		UUID randomUUID = UUID.randomUUID();
 		return randomUUID.toString().replaceAll("_", "");
+	}
+	@AfterMethod
+	public void cb() {
+		driver.close();
 	}
 }

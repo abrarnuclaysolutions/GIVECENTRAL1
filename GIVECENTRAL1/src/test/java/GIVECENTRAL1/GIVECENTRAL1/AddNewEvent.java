@@ -1,6 +1,10 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -27,15 +31,17 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class AddNewEvent {
-	WebDriver driver;
+@Listeners(com.utility.Listenerclass.class)
+public class AddNewEvent extends BaseClass {
+//	WebDriver driver;
 	@Test
 	public void Add_New_Event() throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
-		ChromeOptions op = new ChromeOptions();
-		op.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(op);
-		driver.manage().window().maximize();
+		Setup();
+//		WebDriverManager.chromedriver().setup();
+//		ChromeOptions op = new ChromeOptions();
+//		op.addArguments("--remote-allow-origins=*");
+//		driver = new ChromeDriver(op);
+//		driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/donor-details/profile/kaif12345");
         
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -68,7 +74,7 @@ public class AddNewEvent {
         WebElement selectdate = driver.findElement(By.cssSelector("#paymentStartDate"));
         selectdate.click();
         Thread.sleep(5000);
-        WebElement dayselect = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class='  ui-datepicker-today' or @class=' ui-datepicker-days-cell-over  ui-datepicker-today']"));
+        WebElement dayselect = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class=' ui-datepicker-today' or @class='ui-datepicker-days-cell-over  ui-datepicker-today']"));
         dayselect.click();//currant date issue
         Actions std = new Actions(driver);
         //Add payment method
@@ -90,7 +96,11 @@ public class AddNewEvent {
         WebElement popup = driver.findElement(By.cssSelector("div[id='systemMessagesDiv'] button[type='button']"));
         popup.click();
 //        close driver
-        Thread.sleep(10000);
-        driver.close();
+//        Thread.sleep(10000);
+//        driver.close();
+	}
+	@AfterMethod
+	public void teardown() {
+		driver.close();
 	}
 }

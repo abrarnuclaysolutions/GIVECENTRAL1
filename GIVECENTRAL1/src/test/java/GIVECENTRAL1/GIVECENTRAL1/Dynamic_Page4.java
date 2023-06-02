@@ -1,5 +1,8 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -22,8 +25,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+@Listeners(com.utility.Listenerclass.class)
 
-public class Dynamic_Page4 {
+public class Dynamic_Page4 extends BaseClass {
 	@Test
 	public void DynamicPage4() throws InterruptedException {
 		ChromeOptions op = new ChromeOptions();
@@ -279,7 +283,11 @@ public class Dynamic_Page4 {
 		submit2.click();
 //		close driver
 		Thread.sleep(10000);
-		driver1.close();
+//		driver1.close();
 		
+	}
+	@AfterMethod
+	public void cb() {
+		driver.close();
 	}
 }

@@ -1,10 +1,15 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -17,15 +22,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-public class Text_To_Engage_Report {
+@Listeners(com.utility.Listenerclass.class)
+public class Text_To_Engage_Report extends BaseClass {
 	@Test
 	public void TextToEngageReport() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-        op.addArguments("--remote-allow-origins=*");
-        op.addArguments("incognito");
-        WebDriver driver = new ChromeDriver(op);
-        driver.manage().window().maximize();
+		Setup();
+//		ChromeOptions op = new ChromeOptions();
+//        op.addArguments("--remote-allow-origins=*");
+//        op.addArguments("incognito");
+//        WebDriver driver = new ChromeDriver(op);
+//        driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/text-to-give/36934");
         //first name
         driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys("abrar");
@@ -87,11 +93,17 @@ public class Text_To_Engage_Report {
         js.executeScript("arguments[0].scrollIntoView();", apply);
         apply.click();
         
-        WebElement searchicon = driver.findElement(By.xpath("//input[@id='searchboxCustom']"));
+        WebElement searchicon = driver.findElement(By.xpath("//input[@id='searchboxCustom ']"));
         searchicon.click();
         searchicon.sendKeys(useridtext);
         //close driver
         Thread.sleep(10000);
-        driver.close();
+//        driver.close();
+        
 	}
+	@AfterMethod
+	public void cb() {
+		driver.close();
+	}
+	
 }

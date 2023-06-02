@@ -1,4 +1,7 @@
 package GIVECENTRAL1.GIVECENTRAL1;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -22,8 +25,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-
-public class Make_Guest_Payment {
+@Listeners(com.utility.Listenerclass.class)
+public class Make_Guest_Payment extends BaseClass {
 	@Test
 	public void MakeGuestPayment() throws InterruptedException {
 		ChromeOptions op = new ChromeOptions();
@@ -119,5 +122,10 @@ public class Make_Guest_Payment {
         WebElement submit = submitwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[value='Submit']")));
         js.executeScript("arguments[0].scrollIntoView();", submit);
         submit.click();
+        Thread.sleep(6000);
+	}
+	@AfterMethod
+	public void cb() {
+		driver.close();
 	}
 }

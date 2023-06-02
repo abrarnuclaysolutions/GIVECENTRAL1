@@ -1,4 +1,7 @@
 package GIVECENTRAL1.GIVECENTRAL1;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -30,8 +33,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-
-public class Dynamic_Page3 {
+@Listeners(com.utility.Listenerclass.class)
+public class Dynamic_Page3 extends BaseClass {
 	WebDriver driver;
 	@Test
 	public void DynamicPage3() throws InterruptedException {
@@ -204,11 +207,15 @@ public class Dynamic_Page3 {
         driver1.findElement(By.xpath("//button[@class='btn btn-success']")).click();
         //close driver
         Thread.sleep(10000);
-        driver1.close();
+//        driver1.close();
     }
     static String usingRandomUUID() {
         UUID randomUUID = UUID.randomUUID();
         return randomUUID.toString().replaceAll("_", "");
       }
+    @AfterMethod
+    public void cb() {
+    	driver.close();
+    }
 
 }

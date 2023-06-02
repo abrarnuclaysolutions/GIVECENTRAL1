@@ -1,5 +1,8 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -22,8 +25,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+@Listeners(com.utility.Listenerclass.class)
 
-public class Express_Setup_Manage_Auction {
+public class Express_Setup_Manage_Auction extends BaseClass {
 	@Test
 	public void Manage_Auction() throws InterruptedException {
 		ChromeOptions op = new ChromeOptions();
@@ -376,327 +380,332 @@ public class Express_Setup_Manage_Auction {
 		driver1.close();
 
 //		Bid by aslam khan user email
-//		op.addArguments("incognito");
-//		WebDriver driver2 = new ChromeDriver(op);
-//		driver2.manage().window().maximize();
-//		driver2.get("https://auction.givecentral.org/live/CODINGIDES" + data);
-//		JavascriptExecutor js2 = (JavascriptExecutor) driver2;
-////		click on current bid
-//		Thread.sleep(5000);
-//		WebElement cb1 = driver2.findElement(By.xpath("//div[2]/div[1]/div[1]/span[1]"));
-//		js2.executeScript("arguments[0].scrollIntoView();", cb1);
-//		cb1.click();
-//		// second time increase bid value
-//		Thread.sleep(4000);
-//		WebElement ib2 = driver2.findElement(By.xpath("//span[@class='input-group-btn']//button[@type='button']"));
-//		ib2.click();
-//		// click on place my bid
-//		Thread.sleep(5000);
-//		WebElement pb1 = driver2.findElement(By.xpath(
-//				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
-//		pb1.click();
-//		// username
-//		Thread.sleep(10000);
-//		WebElement un1 = driver2.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
-//		un1.sendKeys("aslamkhan");
-//		// pass
-//		WebElement pass1 = driver2.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
-//		pass1.sendKeys("aslam12345");
-//		// click on login
-//		Thread.sleep(5000);
-//		WebElement login1 = driver2.findElement(By.xpath("//button[contains(text(),'Log In')]"));
-//		login1.click();
-//
-//		// click on continue
-//		Thread.sleep(4000);
-//		WebDriverWait wocont1 = new WebDriverWait(driver2, Duration.ofSeconds(10));
-//		WebElement cont2 = wocont1.until(ExpectedConditions.visibilityOfElementLocated(
-//				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
-//		cont2.click();
-//		Thread.sleep(5000);
-//		WebElement tmtmb2 = driver2.findElement(
-//				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
-//		tmtmb2.click();
-//		// close driver
-//		driver2.close();
-//
-////bid on second item by aslam khan payment 1
-//		op.addArguments("incognito");
-//		WebDriver driver3 = new ChromeDriver(op);
-//		driver3.manage().window().maximize();
-//		driver3.get("https://auction.givecentral.org/live/CODINGIDES" + data);
-//		JavascriptExecutor js3 = (JavascriptExecutor) driver3;
-//
-////		click on current bid
-//		Thread.sleep(5000);
-//		WebElement cb2 = driver3
-//				.findElement(By.xpath("//div[@class='row']//div[2]//div[@class='featured-item mb-5 mouse']//span[1]"));
-//		js3.executeScript("arguments[0].scrollIntoView();", cb2);
-//		cb2.click();
-////		click on place my bid
-//		Thread.sleep(5000);
-//		WebElement pb2 = driver3.findElement(By.xpath(
-//				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
-//		pb2.click();
-////		username
-//		Thread.sleep(10000);
-//		WebElement un2 = driver3.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
-//		un2.sendKeys("aslamkhan");
-////		pass
-//		WebElement pass2 = driver3.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
-//		pass2.sendKeys("aslam12345");
-////		click on login
-//		Thread.sleep(5000);
-//		WebElement login2 = driver3.findElement(By.xpath("//button[contains(text(),'Log In')]"));
-//		login2.click();
-//
-////		click on continue
-//		Thread.sleep(4000);
-//		WebDriverWait wocont2 = new WebDriverWait(driver3, Duration.ofSeconds(10));
-//		WebElement cont3 = wocont2.until(ExpectedConditions.visibilityOfElementLocated(
-//				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
-//		cont3.click();
-//		Thread.sleep(5000);
-//		WebElement tmtmb3 = driver3.findElement(
-//				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
-//		tmtmb3.click();
-//		driver3.close();
-//
-//// bid on second item by sahana khan payment 2
-//		op.addArguments("incognito");
-//		WebDriver driver4 = new ChromeDriver(op);
-//		driver4.manage().window().maximize();
-//		driver4.get("https://auction.givecentral.org/live/CODINGIDES" + data);
-//		JavascriptExecutor js4 = (JavascriptExecutor) driver4;
-//
-//		// click on current bid
-//		Thread.sleep(5000);
-//		WebElement cb3 = driver4
-//				.findElement(By.xpath("//div[@class='row']//div[2]//div[@class='featured-item mb-5 mouse']//span[1]"));
-//		js4.executeScript("arguments[0].scrollIntoView();", cb3);
-//		cb3.click();
-////		increase bid value
-//		Thread.sleep(4000);
-//		WebElement ib4 = driver4.findElement(By.xpath("//span[@class='input-group-btn']//button[@type='button']"));
-//		ib4.click();
-////		click on place my bid
-//		Thread.sleep(5000);
-//		WebElement pb3 = driver4.findElement(By.xpath(
-//				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
-//		pb3.click();
-//		// username
-//		Thread.sleep(10000);
-//		WebElement un3 = driver4.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
-//		un3.sendKeys("sahanakhan");
-//		// pass
-//		WebElement pass3 = driver4.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
-//		pass3.sendKeys("sahana12345");
-//		// click on login
-//		Thread.sleep(5000);
-//		WebElement login3 = driver4.findElement(By.xpath("//button[contains(text(),'Log In')]"));
-//		login3.click();
-//
-////		click on continue
-//		Thread.sleep(4000);
-//		WebDriverWait wocont3 = new WebDriverWait(driver4, Duration.ofSeconds(10));
-//		WebElement cont4 = wocont3.until(ExpectedConditions.visibilityOfElementLocated(
-//				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
-//		cont4.click();
-//		Thread.sleep(5000);
-//		WebElement tmtmb4 = driver4.findElement(
-//				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
-//		tmtmb4.click();
-//		driver4.close();
-//
-////		bid for third item by sahana khan user and payment 1
-//		op.addArguments("incognito");
-//		WebDriver driver5 = new ChromeDriver(op);
-//		driver5.manage().window().maximize();
-//		driver5.get("https://auction.givecentral.org/live/CODINGIDES" + data);
-//		JavascriptExecutor js5 = (JavascriptExecutor) driver5;
-//
-//		// click on current bid
-//		Thread.sleep(5000);
-//		WebElement cb4 = driver5
-//				.findElement(By.xpath("//div[@class='row']//div[3]//div//span[1]"));
-//		js5.executeScript("arguments[0].scrollIntoView();", cb4);
-//		cb4.click();
-////		click on place my bid
-//		Thread.sleep(5000);
-//		WebElement pb4 = driver5.findElement(By.xpath(
-//				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
-//		pb4.click();
-//		// username
-//		Thread.sleep(10000);
-//		WebElement un4 = driver5.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
-//		un4.sendKeys("sahanakhan");
-//		// pass
-//		WebElement pass4 = driver5.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
-//		pass4.sendKeys("sahana12345");
-//		// click on login
-//		Thread.sleep(5000);
-//		WebElement login4 = driver5.findElement(By.xpath("//button[contains(text(),'Log In')]"));
-//		login4.click();
-////		click on continue
-//		Thread.sleep(4000);
-//		WebDriverWait wocont4 = new WebDriverWait(driver5, Duration.ofSeconds(10));
-//		WebElement cont5 = wocont4.until(ExpectedConditions.visibilityOfElementLocated(
-//				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
-//		cont5.click();
-//		Thread.sleep(5000);
-//		WebElement tmtmb5 = driver5.findElement(
-//				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
-//		tmtmb5.click();
-//		driver5.close();
-//		
-////		second time bid for third item by aslam khan user payment 2
-//		op.addArguments("incognito");
-//		WebDriver driver6 = new ChromeDriver(op);
-//		driver6.manage().window().maximize();
-//		driver6.get("https://auction.givecentral.org/live/CODINGIDES" + data);
-//		JavascriptExecutor js6 = (JavascriptExecutor) driver6;
-//
-//		// click on current bid
-//		Thread.sleep(5000);
-//		WebElement cb5 = driver6
-//				.findElement(By.xpath("//div[@class='row']//div[3]//div//span[1]"));
-//		js6.executeScript("arguments[0].scrollIntoView();", cb5);
-//		cb5.click();
-//		// increase bid value
-//		Thread.sleep(4000);
-//		WebElement ib6 = driver6.findElement(By.xpath("//span[@class='input-group-btn']//button[@type='button']"));
-//		ib6.click();
-////		click on place my bid
-//		Thread.sleep(5000);
-//		WebElement pb5 = driver6.findElement(By.xpath(
-//				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
-//		pb5.click();
-//		// username
-//		Thread.sleep(10000);
-//		WebElement un5 = driver6.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
-//		un5.sendKeys("aslamkhan");
-//		// pass
-//		WebElement pass5 = driver6.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
-//		pass5.sendKeys("aslam12345");
-//		// click on login
-//		Thread.sleep(5000);
-//		WebElement login5 = driver6.findElement(By.xpath("//button[contains(text(),'Log In')]"));
-//		login5.click();
-//		// click on continue
-//		Thread.sleep(4000);
-//		WebDriverWait wocont5 = new WebDriverWait(driver6, Duration.ofSeconds(10));
-//		WebElement cont6 = wocont5.until(ExpectedConditions.visibilityOfElementLocated(
-//				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
-//		cont6.click();
-//		Thread.sleep(5000);
-//		WebElement tmtmb6 = driver6.findElement(
-//				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
-//		tmtmb6.click();
-//		driver6.close();
-//		
-//		
-//		//bid for fourth item by aslam khan payment 1
-//		op.addArguments("incognito");
-//		WebDriver driver7 = new ChromeDriver(op);
-//		driver7.manage().window().maximize();
-////	    driver.get("https://www.givecentral.org")
-//		driver7.get("https://auction.givecentral.org/live/CODINGIDES" + data);
-//		JavascriptExecutor js7 = (JavascriptExecutor) driver7;
-////		click on current bid
-//		Thread.sleep(5000);
-//		WebElement cb7 = driver7
-//				.findElement(By.xpath("//div[@class='row']//div[4]//div//span[1]"));
-//		js7.executeScript("arguments[0].scrollIntoView();", cb7);
-//		cb7.click();
-//	 // click on place my bid
-//		Thread.sleep(5000);
-//		WebElement pb7 = driver7.findElement(By.xpath(
-//				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
-//		pb7.click();
-//		// username
-//		Thread.sleep(10000);
-//		WebElement un7 = driver7.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
-//		un7.sendKeys("aslamkhan");
-//		// pass
-//		WebElement pass7 = driver7.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
-//		pass7.sendKeys("aslam12345");
-//		// click on login
-//		Thread.sleep(5000);
-//		WebElement login7 = driver7.findElement(By.xpath("//button[contains(text(),'Log In')]"));
-//		login7.click();
-////		click on continue
-//		Thread.sleep(4000);
-//		WebDriverWait wocont7 = new WebDriverWait(driver7, Duration.ofSeconds(10));
-//		WebElement cont7 = wocont7.until(ExpectedConditions.visibilityOfElementLocated(
-//				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
-//		cont7.click();
-//		Thread.sleep(5000);
-//		WebElement tmtmb7 = driver7.findElement(
-//				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
-//		tmtmb7.click();
-//		driver7.close();
-//		
-//		
-//		//second time bid for fourth item by sahana khan user payment2
-//		op.addArguments("incognito");
-//		WebDriver driver8 = new ChromeDriver(op);
-//		driver8.manage().window().maximize();
-//		driver8.get("https://auction.givecentral.org/live/CODINGIDES" + data);
-//		JavascriptExecutor js8 = (JavascriptExecutor) driver8;
-//		// click on current bid
-//		Thread.sleep(5000);
-//		WebElement cb8 = driver8
-//				.findElement(By.xpath("//div[@class='row']//div[4]//div//span[1]"));
-//		js8.executeScript("arguments[0].scrollIntoView();", cb8);
-//		cb8.click();
-//		// increase bid value
-//		Thread.sleep(4000);
-//		WebElement ib8 = driver8.findElement(By.xpath("//span[@class='input-group-btn']//button[@type='button']"));
-//		ib8.click();
-//		// click on place my bid
-//		Thread.sleep(5000);
-//		WebElement pb8 = driver8.findElement(By.xpath(
-//				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
-//		pb8.click();
-//		// username
-//		Thread.sleep(10000);
-//		WebElement un8 = driver8.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
-//		un8.sendKeys("sahanakhan");
-//		// pass
-//		WebElement pass8 = driver8.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
-//		pass8.sendKeys("sahana12345");
-//		// click on login
-//		Thread.sleep(5000);
-//		WebElement login8 = driver8.findElement(By.xpath("//button[contains(text(),'Log In')]"));
-//		login8.click();
-//		// click on continue
-//		Thread.sleep(4000);
-//		WebDriverWait wocont8 = new WebDriverWait(driver8, Duration.ofSeconds(10));
-//		WebElement cont8 = wocont8.until(ExpectedConditions.visibilityOfElementLocated(
-//				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
-//		cont8.click();
-//		Thread.sleep(5000);
-//		WebElement tmtmb8 = driver8.findElement(
-//				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
-//		tmtmb8.click();
-//		driver8.close();
+		op.addArguments("incognito");
+		WebDriver driver2 = new ChromeDriver(op);
+		driver2.manage().window().maximize();
+		driver2.get("https://auction.givecentral.org/live/CODINGIDES" + data);
+		JavascriptExecutor js2 = (JavascriptExecutor) driver2;
+//		click on current bid
+		Thread.sleep(5000);
+		WebElement cb1 = driver2.findElement(By.xpath("//div[2]/div[1]/div[1]/span[1]"));
+		js2.executeScript("arguments[0].scrollIntoView();", cb1);
+		cb1.click();
+		// second time increase bid value
+		Thread.sleep(4000);
+		WebElement ib2 = driver2.findElement(By.xpath("//span[@class='input-group-btn']//button[@type='button']"));
+		ib2.click();
+		// click on place my bid
+		Thread.sleep(5000);
+		WebElement pb1 = driver2.findElement(By.xpath(
+				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
+		pb1.click();
+		// username
+		Thread.sleep(10000);
+		WebElement un1 = driver2.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
+		un1.sendKeys("aslamkhan");
+		// pass
+		WebElement pass1 = driver2.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
+		pass1.sendKeys("aslam12345");
+		// click on login
+		Thread.sleep(5000);
+		WebElement login1 = driver2.findElement(By.xpath("//button[contains(text(),'Log In')]"));
+		login1.click();
+
+		// click on continue
+		Thread.sleep(4000);
+		WebDriverWait wocont1 = new WebDriverWait(driver2, Duration.ofSeconds(10));
+		WebElement cont2 = wocont1.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
+		cont2.click();
+		Thread.sleep(5000);
+		WebElement tmtmb2 = driver2.findElement(
+				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
+		tmtmb2.click();
+		// close driver
+		driver2.close();
+
+//bid on second item by aslam khan payment 1
+		op.addArguments("incognito");
+		WebDriver driver3 = new ChromeDriver(op);
+		driver3.manage().window().maximize();
+		driver3.get("https://auction.givecentral.org/live/CODINGIDES" + data);
+		JavascriptExecutor js3 = (JavascriptExecutor) driver3;
+
+//		click on current bid
+		Thread.sleep(5000);
+		WebElement cb2 = driver3
+				.findElement(By.xpath("//div[@class='row']//div[2]//div[@class='featured-item mb-5 mouse']//span[1]"));
+		js3.executeScript("arguments[0].scrollIntoView();", cb2);
+		cb2.click();
+//		click on place my bid
+		Thread.sleep(5000);
+		WebElement pb2 = driver3.findElement(By.xpath(
+				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
+		pb2.click();
+//		username
+		Thread.sleep(10000);
+		WebElement un2 = driver3.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
+		un2.sendKeys("aslamkhan");
+//		pass
+		WebElement pass2 = driver3.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
+		pass2.sendKeys("aslam12345");
+//		click on login
+		Thread.sleep(5000);
+		WebElement login2 = driver3.findElement(By.xpath("//button[contains(text(),'Log In')]"));
+		login2.click();
+
+//		click on continue
+		Thread.sleep(4000);
+		WebDriverWait wocont2 = new WebDriverWait(driver3, Duration.ofSeconds(10));
+		WebElement cont3 = wocont2.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
+		cont3.click();
+		Thread.sleep(5000);
+		WebElement tmtmb3 = driver3.findElement(
+				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
+		tmtmb3.click();
+		driver3.close();
+
+// bid on second item by sahana khan payment 2
+		op.addArguments("incognito");
+		WebDriver driver4 = new ChromeDriver(op);
+		driver4.manage().window().maximize();
+		driver4.get("https://auction.givecentral.org/live/CODINGIDES" + data);
+		JavascriptExecutor js4 = (JavascriptExecutor) driver4;
+
+		// click on current bid
+		Thread.sleep(5000);
+		WebElement cb3 = driver4
+				.findElement(By.xpath("//div[@class='row']//div[2]//div[@class='featured-item mb-5 mouse']//span[1]"));
+		js4.executeScript("arguments[0].scrollIntoView();", cb3);
+		cb3.click();
+//		increase bid value
+		Thread.sleep(4000);
+		WebElement ib4 = driver4.findElement(By.xpath("//span[@class='input-group-btn']//button[@type='button']"));
+		ib4.click();
+//		click on place my bid
+		Thread.sleep(5000);
+		WebElement pb3 = driver4.findElement(By.xpath(
+				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
+		pb3.click();
+		// username
+		Thread.sleep(10000);
+		WebElement un3 = driver4.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
+		un3.sendKeys("sahanakhan");
+		// pass
+		WebElement pass3 = driver4.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
+		pass3.sendKeys("sahana12345");
+		// click on login
+		Thread.sleep(5000);
+		WebElement login3 = driver4.findElement(By.xpath("//button[contains(text(),'Log In')]"));
+		login3.click();
+
+//		click on continue
+		Thread.sleep(4000);
+		WebDriverWait wocont3 = new WebDriverWait(driver4, Duration.ofSeconds(10));
+		WebElement cont4 = wocont3.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
+		cont4.click();
+		Thread.sleep(5000);
+		WebElement tmtmb4 = driver4.findElement(
+				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
+		tmtmb4.click();
+		driver4.close();
+
+//		bid for third item by sahana khan user and payment 1
+		op.addArguments("incognito");
+		WebDriver driver5 = new ChromeDriver(op);
+		driver5.manage().window().maximize();
+		driver5.get("https://auction.givecentral.org/live/CODINGIDES" + data);
+		JavascriptExecutor js5 = (JavascriptExecutor) driver5;
+
+		// click on current bid
+		Thread.sleep(5000);
+		WebElement cb4 = driver5
+				.findElement(By.xpath("//div[@class='row']//div[3]//div//span[1]"));
+		js5.executeScript("arguments[0].scrollIntoView();", cb4);
+		cb4.click();
+//		click on place my bid
+		Thread.sleep(5000);
+		WebElement pb4 = driver5.findElement(By.xpath(
+				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
+		pb4.click();
+		// username
+		Thread.sleep(10000);
+		WebElement un4 = driver5.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
+		un4.sendKeys("sahanakhan");
+		// pass
+		WebElement pass4 = driver5.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
+		pass4.sendKeys("sahana12345");
+		// click on login
+		Thread.sleep(5000);
+		WebElement login4 = driver5.findElement(By.xpath("//button[contains(text(),'Log In')]"));
+		login4.click();
+//		click on continue
+		Thread.sleep(4000);
+		WebDriverWait wocont4 = new WebDriverWait(driver5, Duration.ofSeconds(10));
+		WebElement cont5 = wocont4.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
+		cont5.click();
+		Thread.sleep(5000);
+		WebElement tmtmb5 = driver5.findElement(
+				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
+		tmtmb5.click();
+		driver5.close();
+		
+//		second time bid for third item by aslam khan user payment 2
+		op.addArguments("incognito");
+		WebDriver driver6 = new ChromeDriver(op);
+		driver6.manage().window().maximize();
+		driver6.get("https://auction.givecentral.org/live/CODINGIDES" + data);
+		JavascriptExecutor js6 = (JavascriptExecutor) driver6;
+
+		// click on current bid
+		Thread.sleep(5000);
+		WebElement cb5 = driver6
+				.findElement(By.xpath("//div[@class='row']//div[3]//div//span[1]"));
+		js6.executeScript("arguments[0].scrollIntoView();", cb5);
+		cb5.click();
+		// increase bid value
+		Thread.sleep(4000);
+		WebElement ib6 = driver6.findElement(By.xpath("//span[@class='input-group-btn']//button[@type='button']"));
+		ib6.click();
+//		click on place my bid
+		Thread.sleep(5000);
+		WebElement pb5 = driver6.findElement(By.xpath(
+				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
+		pb5.click();
+		// username
+		Thread.sleep(10000);
+		WebElement un5 = driver6.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
+		un5.sendKeys("aslamkhan");
+		// pass
+		WebElement pass5 = driver6.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
+		pass5.sendKeys("aslam12345");
+		// click on login
+		Thread.sleep(5000);
+		WebElement login5 = driver6.findElement(By.xpath("//button[contains(text(),'Log In')]"));
+		login5.click();
+		// click on continue
+		Thread.sleep(4000);
+		WebDriverWait wocont5 = new WebDriverWait(driver6, Duration.ofSeconds(10));
+		WebElement cont6 = wocont5.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
+		cont6.click();
+		Thread.sleep(5000);
+		WebElement tmtmb6 = driver6.findElement(
+				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
+		tmtmb6.click();
+		driver6.close();
+		
+		
+		//bid for fourth item by aslam khan payment 1
+		op.addArguments("incognito");
+		WebDriver driver7 = new ChromeDriver(op);
+		driver7.manage().window().maximize();
+//	    driver.get("https://www.givecentral.org")
+		driver7.get("https://auction.givecentral.org/live/CODINGIDES" + data);
+		JavascriptExecutor js7 = (JavascriptExecutor) driver7;
+//		click on current bid
+		Thread.sleep(5000);
+		WebElement cb7 = driver7
+				.findElement(By.xpath("//div[@class='row']//div[4]//div//span[1]"));
+		js7.executeScript("arguments[0].scrollIntoView();", cb7);
+		cb7.click();
+	 // click on place my bid
+		Thread.sleep(5000);
+		WebElement pb7 = driver7.findElement(By.xpath(
+				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
+		pb7.click();
+		// username
+		Thread.sleep(10000);
+		WebElement un7 = driver7.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
+		un7.sendKeys("aslamkhan");
+		// pass
+		WebElement pass7 = driver7.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
+		pass7.sendKeys("aslam12345");
+		// click on login
+		Thread.sleep(5000);
+		WebElement login7 = driver7.findElement(By.xpath("//button[contains(text(),'Log In')]"));
+		login7.click();
+//		click on continue
+		Thread.sleep(4000);
+		WebDriverWait wocont7 = new WebDriverWait(driver7, Duration.ofSeconds(10));
+		WebElement cont7 = wocont7.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
+		cont7.click();
+		Thread.sleep(5000);
+		WebElement tmtmb7 = driver7.findElement(
+				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
+		tmtmb7.click();
+		driver7.close();
+		
+		
+		//second time bid for fourth item by sahana khan user payment2
+		op.addArguments("incognito");
+		WebDriver driver8 = new ChromeDriver(op);
+		driver8.manage().window().maximize();
+		driver8.get("https://auction.givecentral.org/live/CODINGIDES" + data);
+		JavascriptExecutor js8 = (JavascriptExecutor) driver8;
+		// click on current bid
+		Thread.sleep(5000);
+		WebElement cb8 = driver8
+				.findElement(By.xpath("//div[@class='row']//div[4]//div//span[1]"));
+		js8.executeScript("arguments[0].scrollIntoView();", cb8);
+		cb8.click();
+		// increase bid value
+		Thread.sleep(4000);
+		WebElement ib8 = driver8.findElement(By.xpath("//span[@class='input-group-btn']//button[@type='button']"));
+		ib8.click();
+		// click on place my bid
+		Thread.sleep(5000);
+		WebElement pb8 = driver8.findElement(By.xpath(
+				"//div[@class='col-md-6 text-right']//button[@class='btn btn-theme' and contains(text(),'Place My Bid')]"));
+		pb8.click();
+		// username
+		Thread.sleep(10000);
+		WebElement un8 = driver8.findElement(By.xpath("//div//input[@id='username' and @name='email']"));
+		un8.sendKeys("sahanakhan");
+		// pass
+		WebElement pass8 = driver8.findElement(By.xpath("//input[@id='exampleInputPassword1']"));
+		pass8.sendKeys("sahana12345");
+		// click on login
+		Thread.sleep(5000);
+		WebElement login8 = driver8.findElement(By.xpath("//button[contains(text(),'Log In')]"));
+		login8.click();
+		// click on continue
+		Thread.sleep(4000);
+		WebDriverWait wocont8 = new WebDriverWait(driver8, Duration.ofSeconds(10));
+		WebElement cont8 = wocont8.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//button[@class='btn btn-theme' and contains(text(),'Continue')]")));
+		cont8.click();
+		Thread.sleep(5000);
+		WebElement tmtmb8 = driver8.findElement(
+				By.xpath("//button[@class='btn btn-theme p-2' and contains(text(),'Take me to My Bids')]"));
+		tmtmb8.click();
+		driver8.close();
 //		
 		//get url 	
 		driver.get("https://auction.givecentral.org/my_auctions");
 		driver.manage().window().maximize();
-		Thread.sleep(10000);
-		Actions act = new Actions(driver);
-		WebElement co1 = driver.findElement(By.xpath("//tbody//tr[1]//td[7]//div[1]//button[3]"));
-		js.executeScript("arguments[0].scrollIntoView();", co1);
-//		js.executeScript("arguments[0].setAttribute('style', 'border:2px solid red; background:yellow')", co1);
-//		co1.click();
-		Thread.sleep(5000);
-		act.moveToElement(co1).build().perform();
+//		Thread.sleep(10000);
+//		Actions act = new Actions(driver);
+//		WebElement co1 = driver.findElement(By.xpath("//tbody//tr[1]//td[7]//div[1]//button[3]"));
+//		js.executeScript("arguments[0].scrollIntoView();", co1);
+////		js.executeScript("arguments[0].setAttribute('style', 'border:2px solid red; background:yellow')", co1);
+////		co1.click();
+//		Thread.sleep(5000);
+//		act.moveToElement(co1).build().perform();
 		
 		//click on end this auction 
 //		Thread.sleep(5000);
 //		WebElement eta = driver.findElement(By.xpath("//button[contains(text(),'End This Auction')]"));
 //		js.executeScript("arguments[0].scrollIntoView();", eta);
 //		eta.click();
+	}
+	@AfterMethod
+	public void cb() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.close();
 	}
 }

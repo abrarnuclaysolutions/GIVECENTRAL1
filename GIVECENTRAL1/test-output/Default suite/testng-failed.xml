@@ -6,6 +6,7 @@
       <class name="GIVECENTRAL1.GIVECENTRAL1.AddNewEvent">
         <methods>
           <include name="Add_New_Event"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- GIVECENTRAL1.GIVECENTRAL1.AddNewEvent -->
     </classes>
