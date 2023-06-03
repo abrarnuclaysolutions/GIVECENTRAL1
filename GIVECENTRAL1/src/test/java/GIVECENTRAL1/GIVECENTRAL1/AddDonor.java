@@ -23,14 +23,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(com.utility.Listenerclass.class)
 public class AddDonor extends BaseClass {
-	WebDriver driver;
+//	WebDriver driver;
+	
 	@Test
 	public void Add_Donor() throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
-		ChromeOptions op = new ChromeOptions();
-		op.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(op);
-		driver.manage().window().maximize();
+		Setup();
+		test=extent.createTest("AddDonor");
+//		WebDriverManager.chromedriver().setup();
+//		ChromeOptions op = new ChromeOptions();
+//		op.addArguments("--remote-allow-origins=*");
+//		driver = new ChromeDriver(op);
+//		driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         // Login...
@@ -116,8 +119,8 @@ public class AddDonor extends BaseClass {
 //        driver.close();
         
 	}
-	@AfterMethod
-	public void cb() {
-		driver.close();
-	}
+//	@AfterMethod
+//	public void cb() {
+//		driver.close();
+//	}
 }

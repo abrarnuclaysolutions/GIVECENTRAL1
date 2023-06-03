@@ -30,10 +30,12 @@ import org.testng.annotations.Test;
 public class Pladged_Event extends BaseClass {
 	@Test
 	public void PladgedEvent() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-        op.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(op);
-        driver.manage().window().maximize();
+		Setup();
+		test = extent.createTest("Pladged_Event");
+//		ChromeOptions op = new ChromeOptions();
+//        op.addArguments("--remote-allow-origins=*");
+//        WebDriver driver = new ChromeDriver(op);
+//        driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         // Login...     
@@ -112,7 +114,7 @@ public class Pladged_Event extends BaseClass {
          WebElement submit = driver.findElement(By.cssSelector("button[class='btn btn-primary btn-shd addEvent freqType']"));
          submit.click();
 //         close driver
-         Thread.sleep(10000);
+         Thread.sleep(6000);
 //         driver.close();
 
     }
@@ -120,8 +122,8 @@ public class Pladged_Event extends BaseClass {
         UUID randomUUID = UUID.randomUUID();
         return randomUUID.toString().replaceAll("_", "");
       }
-    @AfterMethod
-    public void cb() {
-    	driver.close();
-    }
+//    @AfterMethod
+//    public void cb() {
+//    	driver.close();
+//    }
 }

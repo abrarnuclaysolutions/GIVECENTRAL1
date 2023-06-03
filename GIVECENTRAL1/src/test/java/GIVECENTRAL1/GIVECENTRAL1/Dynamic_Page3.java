@@ -36,13 +36,15 @@ import org.testng.annotations.Test;
 
 @Listeners(com.utility.Listenerclass.class)
 public class Dynamic_Page3 extends BaseClass {
-	WebDriver driver;
+//	WebDriver driver;
 	@Test
 	public void DynamicPage3() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-        op.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(op);
-        driver.manage().window().maximize();
+		Setup();
+		test = extent.createTest("Dynamic_Page3");
+//		ChromeOptions op = new ChromeOptions();
+//        op.addArguments("--remote-allow-origins=*");
+//        WebDriver driver = new ChromeDriver(op);
+//        driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
          // object of javascript
@@ -146,6 +148,8 @@ public class Dynamic_Page3 extends BaseClass {
         driver.close();
         //open url
 //        op.addArguments("--remote-allow-origins=*");
+        ChromeOptions op = new ChromeOptions();
+		op.addArguments("--remote-allow-origins=*");
         op.addArguments("incognito");
         WebDriver driver1 = new ChromeDriver(op); 
         driver1.manage().window().maximize();
@@ -207,16 +211,16 @@ public class Dynamic_Page3 extends BaseClass {
         Thread.sleep(2000);
         driver1.findElement(By.xpath("//button[@class='btn btn-success']")).click();
         //close driver
-        Thread.sleep(10000);
-//        driver1.close();
+//        Thread.sleep(10000);
+        driver1.close();
     }
     static String usingRandomUUID() {
         UUID randomUUID = UUID.randomUUID();
         return randomUUID.toString().replaceAll("_", "");
       }
-    @AfterMethod
-    public void cb() {
-    	driver.close();
-    }
+//    @AfterMethod
+//    public void cb() {
+//    	driver.close();
+//    }
 
 }

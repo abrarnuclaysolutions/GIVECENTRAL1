@@ -30,13 +30,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 @Listeners(com.utility.Listenerclass.class)
 public class Crowdfounding_Event extends BaseClass {
-	WebDriver driver;
+//	WebDriver driver;
 	@Test
 	public void CrowdfoundingEvent() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-        op.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(op);
-        driver.manage().window().maximize();
+		Setup();
+		test = extent.createTest("Crowdfounding_Event");
+//		ChromeOptions op = new ChromeOptions();
+//        op.addArguments("--remote-allow-origins=*");
+//        driver = new ChromeDriver(op);
+//        driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         // Login...
@@ -119,9 +121,9 @@ public class Crowdfounding_Event extends BaseClass {
         UUID randomUUID = UUID.randomUUID();
         return randomUUID.toString().replaceAll("_", "");
     }
-    @AfterMethod
-    public void cb() {
-    	driver.close();
-    }
+//    @AfterMethod
+//    public void cb() {
+//    	driver.close();
+//    }
 	
 }

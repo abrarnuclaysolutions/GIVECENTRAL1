@@ -38,6 +38,7 @@ public class AddNewEvent extends BaseClass {
 	@Test
 	public void Add_New_Event() throws InterruptedException {
 		Setup();
+		test=extent.createTest("addnewevent");
 //		WebDriverManager.chromedriver().setup();
 //		ChromeOptions op = new ChromeOptions();
 //		op.addArguments("--remote-allow-origins=*");
@@ -75,7 +76,7 @@ public class AddNewEvent extends BaseClass {
         WebElement selectdate = driver.findElement(By.cssSelector("#paymentStartDate"));
         selectdate.click();
         Thread.sleep(5000);
-        WebElement dayselect = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class=' ui-datepicker-today' or @class='ui-datepicker-days-cell-over  ui-datepicker-today']"));
+        WebElement dayselect = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class='  ui-datepicker-today' or @class=' ui-datepicker-days-cell-over  ui-datepicker-today' or @class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-today']"));
         dayselect.click();//currant date issue
         Actions std = new Actions(driver);
         //Add payment method
@@ -100,8 +101,8 @@ public class AddNewEvent extends BaseClass {
 //        Thread.sleep(10000);
 //        driver.close();
 	}
-	@AfterMethod
-	public void teardown() {
-		driver.close();
-	}
+//	@AfterMethod
+//	public void teardown() {
+//		driver.close();
+//	}
 }

@@ -27,14 +27,15 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 @Listeners(com.utility.Listenerclass.class)
-
 public class Express_Setup_Manage_Auction extends BaseClass {
 	@Test
 	public void Manage_Auction() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-		op.addArguments("--remote-allow-origins=*");
-		WebDriver driver = new ChromeDriver(op);
-		driver.manage().window().maximize();
+		Setup();
+		test = extent.createTest("Express_Setup_Manage_Auction");
+//		ChromeOptions op = new ChromeOptions();
+//		op.addArguments("--remote-allow-origins=*");
+//		WebDriver driver = new ChromeDriver(op);
+//		driver.manage().window().maximize();
 		// URL
 		driver.get("https://www.givecentral.org/admin");
 //		javascript object
@@ -334,6 +335,8 @@ public class Express_Setup_Manage_Auction extends BaseClass {
 		asl.click();
 
 //open incognito mode
+        ChromeOptions op = new ChromeOptions();
+		op.addArguments("--remote-allow-origins=*");
 		op.addArguments("incognito");
 		WebDriver driver1 = new ChromeDriver(op);
 		driver1.manage().window().maximize();
@@ -704,9 +707,9 @@ public class Express_Setup_Manage_Auction extends BaseClass {
 //		js.executeScript("arguments[0].scrollIntoView();", eta);
 //		eta.click();
 	}
-	@AfterMethod
-	public void cb() throws InterruptedException {
-		Thread.sleep(5000);
-		driver.close();
-	}
+//	@AfterMethod
+//	public void cba() throws InterruptedException {
+//		Thread.sleep(5000);
+//		driver.close();
+//	}
 }

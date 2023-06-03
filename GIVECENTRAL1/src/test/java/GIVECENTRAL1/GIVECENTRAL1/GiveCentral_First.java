@@ -29,11 +29,13 @@ import org.testng.annotations.Test;
 public class GiveCentral_First extends BaseClass {
 	@Test
 	public void GC_First() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-        op.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(op);
-
-        driver.manage().window().maximize();
+		Setup();
+		test = extent.createTest("GiveCentral_First");
+//		ChromeOptions op = new ChromeOptions();
+//        op.addArguments("--remote-allow-origins=*");
+//        WebDriver driver = new ChromeDriver(op);
+//
+//        driver.manage().window().maximize();
         //Website URL with Location
         driver.get("https://www.givecentral.org/location/7/");
         JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -115,11 +117,11 @@ public class GiveCentral_First extends BaseClass {
         //submit after login
         driver.findElement(By.cssSelector("#submit_gift")).click(); 
 //        close driver
-        Thread.sleep(10000);
+//        Thread.sleep(10000);
 //        driver.close();
 	}
-	@AfterMethod
-	public void cb() {
-		driver.close();
-	}
+//	@AfterMethod
+//	public void cb() {
+//		driver.close();
+//	}
 }

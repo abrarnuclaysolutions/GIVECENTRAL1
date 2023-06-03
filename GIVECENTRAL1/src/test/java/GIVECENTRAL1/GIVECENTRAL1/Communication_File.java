@@ -35,13 +35,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 @Listeners(com.utility.Listenerclass.class)
 
 public class Communication_File extends BaseClass {
-	WebDriver driver;
+//	WebDriver driver;
 	@Test
 	public void Comm_file() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-        op.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(op);
-        driver.manage().window().maximize();
+		Setup();
+		test=extent.createTest("Communication_File");
+//		ChromeOptions op = new ChromeOptions();
+//        op.addArguments("--remote-allow-origins=*");
+//        driver = new ChromeDriver(op);
+//        driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
          // object of javascript
@@ -165,8 +167,8 @@ public class Communication_File extends BaseClass {
         
         Thread.sleep(10000);
 	}
-	@AfterMethod
-	public void cb() {
-		driver.close();
-	}
+//	@AfterMethod
+//	public void cb() {
+//		driver.close();
+//	}
 }

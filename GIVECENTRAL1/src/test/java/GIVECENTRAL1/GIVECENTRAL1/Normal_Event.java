@@ -30,10 +30,12 @@ import org.testng.annotations.Test;
 public class Normal_Event extends BaseClass {
 	@Test
 	public void NormalEvent() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-        op.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(op);
-        driver.manage().window().maximize();
+		Setup();
+		test = extent.createTest("Normal_Event");
+//		ChromeOptions op = new ChromeOptions();
+//        op.addArguments("--remote-allow-origins=*");
+//        WebDriver driver = new ChromeDriver(op);
+//        driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         // Login...
@@ -115,15 +117,15 @@ public class Normal_Event extends BaseClass {
         WebElement submit = driver.findElement(By.cssSelector("button[class='btn btn-primary btn-shd addEvent freqType']"));
         submit.click();
 //        close driver
-        Thread.sleep(10000);
+//        Thread.sleep(10000);
 //        driver.close();
     }
     static String usingRandomUUID() {
         UUID randomUUID = UUID.randomUUID();
         return randomUUID.toString().replaceAll("_", "");
       }
-    @AfterMethod
-    public void cb() {
-    	driver.close();
-    }
+//    @AfterMethod
+//    public void cb() {
+//    	driver.close();
+//    }
 }

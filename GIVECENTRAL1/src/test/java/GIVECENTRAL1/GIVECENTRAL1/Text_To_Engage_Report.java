@@ -28,6 +28,7 @@ public class Text_To_Engage_Report extends BaseClass {
 	@Test
 	public void TextToEngageReport() throws InterruptedException {
 		Setup();
+		test=extent.createTest("AddDonor");
 //		ChromeOptions op = new ChromeOptions();
 //        op.addArguments("--remote-allow-origins=*");
 //        op.addArguments("incognito");
@@ -88,7 +89,7 @@ public class Text_To_Engage_Report extends BaseClass {
         WebElement td = driver.findElement(By.xpath("//input[@id='date_from1']"));
         td.click();
         
-        WebElement seltd = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class='  ui-datepicker-today']"));
+        WebElement seltd = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class='  ui-datepicker-today' or @class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-today']"));
         seltd.click();
         WebElement apply = driver.findElement(By.xpath("//input[@id='submitForm']"));
         js.executeScript("arguments[0].scrollIntoView();", apply);
@@ -98,13 +99,13 @@ public class Text_To_Engage_Report extends BaseClass {
         searchicon.click();
         searchicon.sendKeys(useridtext);
         //close driver
-        Thread.sleep(10000);
+        Thread.sleep(5000);
 //        driver.close();
         
 	}
-	@AfterMethod
-	public void cb() {
-		driver.close();
-	}
+//	@AfterMethod
+//	public void cb() {
+//		driver.close();
+//	}
 	
 }

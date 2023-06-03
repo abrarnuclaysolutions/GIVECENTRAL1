@@ -31,13 +31,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 @Listeners(com.utility.Listenerclass.class)
 public class GC_Profile extends BaseClass { // It's create Pledge file. It has Wrong name.
-	WebDriver driver;
+//	WebDriver driver;
 	@Test
 	public void GCProfile() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-        op.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(op);
-        driver.manage().window().maximize();
+		Setup();
+		test = extent.createTest("GC_Profile");
+//		ChromeOptions op = new ChromeOptions();
+//        op.addArguments("--remote-allow-origins=*");
+//        WebDriver driver = new ChromeDriver(op);
+//        driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/donor-details/profile/kaif12345");
        
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -172,12 +174,12 @@ public class GC_Profile extends BaseClass { // It's create Pledge file. It has W
         si.click();
         si.sendKeys(text);
 //        close driver
-        Thread.sleep(10000);
+//        Thread.sleep(10000);
 //        driver.close();
         
 	}
-	@AfterMethod
-	public void cb() {
-		driver.close();
-	}
+//	@AfterMethod
+//	public void cb() {
+//		driver.close();
+//	}
 }

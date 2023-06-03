@@ -30,10 +30,12 @@ import org.testng.annotations.Test;
 public class Make_Guest_Payment extends BaseClass {
 	@Test
 	public void MakeGuestPayment() throws InterruptedException {
-		ChromeOptions op = new ChromeOptions();
-        op.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(op);
-        driver.manage().window().maximize();
+		Setup();
+		test = extent.createTest("Make_Guest_Payment");
+//		ChromeOptions op = new ChromeOptions();
+//        op.addArguments("--remote-allow-origins=*");
+//        WebDriver driver = new ChromeDriver(op);
+//        driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         // Login...
@@ -125,8 +127,8 @@ public class Make_Guest_Payment extends BaseClass {
         submit.click();
         Thread.sleep(6000);
 	}
-	@AfterMethod
-	public void cb() {
-		driver.close();
-	}
+//	@AfterMethod
+//	public void cb() {
+//		driver.close();
+//	}
 }
