@@ -55,6 +55,8 @@ public class BaseClass extends ExtentReport {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		String newinagestring ="http://localhost:8080/job/GiveCentral/ws/GIVECENTRAL1/screenshotfolder/"+filename+"_"+".png";
 		return gap;
 	}
 	
