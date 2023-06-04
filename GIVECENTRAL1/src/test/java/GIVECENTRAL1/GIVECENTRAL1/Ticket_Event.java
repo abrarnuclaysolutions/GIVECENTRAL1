@@ -1,6 +1,17 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -32,7 +43,6 @@ public class Ticket_Event extends BaseClass {
 	@Test
 	public void TicketEvent() throws InterruptedException {
 		Setup();
-		test = extent.createTest("Ticket_Event");
 //		ChromeOptions op = new ChromeOptions();
 //		op.addArguments("--remote-allow-origins=*");
 //		

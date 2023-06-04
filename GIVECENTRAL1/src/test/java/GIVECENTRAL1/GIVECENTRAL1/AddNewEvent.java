@@ -2,6 +2,17 @@ package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
@@ -32,13 +43,12 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-@Listeners(com.utility.Listenerclass.class)
+//@Listeners(com.utility.Listenerclass.class)
 public class AddNewEvent extends BaseClass {
 //	WebDriver driver;
 	@Test
 	public void Add_New_Event() throws InterruptedException {
 		Setup();
-		test=extent.createTest("addnewevent");
 //		WebDriverManager.chromedriver().setup();
 //		ChromeOptions op = new ChromeOptions();
 //		op.addArguments("--remote-allow-origins=*");

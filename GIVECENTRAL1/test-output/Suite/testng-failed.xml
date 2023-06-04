@@ -6,17 +6,38 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="GIVECENTRAL1.GIVECENTRAL1.AddNewEvent">
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page4">
         <methods>
-          <include name="Add_New_Event"/>
-          <include name="teardown"/>
+          <include name="Setup"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="DynamicPage4"/>
         </methods>
-      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.AddNewEvent -->
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page4 -->
       <class name="GIVECENTRAL1.GIVECENTRAL1.Text_To_Engage_Report">
         <methods>
+          <include name="Setup"/>
           <include name="TextToEngageReport"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
         </methods>
       </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Text_To_Engage_Report -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.GC_Profile">
+        <methods>
+          <include name="Setup"/>
+          <include name="AfterSuite"/>
+          <include name="GCProfile"/>
+          <include name="BeforeSuite"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.GC_Profile -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction">
+        <methods>
+          <include name="Setup"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="Manage_Auction"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

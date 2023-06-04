@@ -1,6 +1,17 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -21,19 +32,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
-@Listeners(com.utility.Listenerclass.class)
+//@Listeners(com.utility.Listenerclass.class)
 public class AddDonor extends BaseClass {
-//	WebDriver driver;
+	WebDriver driver;
 	
 	@Test
 	public void Add_Donor() throws InterruptedException {
-		Setup();
-		test=extent.createTest("AddDonor");
-//		WebDriverManager.chromedriver().setup();
-//		ChromeOptions op = new ChromeOptions();
-//		op.addArguments("--remote-allow-origins=*");
-//		driver = new ChromeDriver(op);
-//		driver.manage().window().maximize();
+//		Setup();
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions op = new ChromeOptions();
+		op.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(op);
+		driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         // Login...
