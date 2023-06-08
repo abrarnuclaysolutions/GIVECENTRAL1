@@ -13,6 +13,8 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
@@ -43,19 +45,11 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//@Listeners(com.utility.Listenerclass.class)
+@Listeners(com.utility.Listenerclass.class)
 public class AddNewEvent extends BaseClass {
-//	WebDriver driver;
 	@Test
 	public void Add_New_Event() throws InterruptedException {
-		Setup();
-//		WebDriverManager.chromedriver().setup();
-//		ChromeOptions op = new ChromeOptions();
-//		op.addArguments("--remote-allow-origins=*");
-//		driver = new ChromeDriver(op);
-//		driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/donor-details/profile/kaif12345");
-        
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         // Login...
         driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
@@ -106,13 +100,6 @@ public class AddNewEvent extends BaseClass {
         submitelement.click();
         //click on popup
         WebElement popup = driver.findElement(By.cssSelector("div[id='systemMessagesDiv'] button[type='button']"));
-        popup.click();
-//        close driver
-//        Thread.sleep(10000);
-//        driver.close();
+        popup.click();     
 	}
-//	@AfterMethod
-//	public void teardown() {
-//		driver.close();
-//	}
 }

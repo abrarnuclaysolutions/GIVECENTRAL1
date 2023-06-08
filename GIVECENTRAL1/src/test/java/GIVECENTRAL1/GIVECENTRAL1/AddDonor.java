@@ -12,7 +12,10 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -32,18 +35,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
-//@Listeners(com.utility.Listenerclass.class)
+@Listeners(com.utility.Listenerclass.class)
 public class AddDonor extends BaseClass {
-	WebDriver driver;
-	
 	@Test
 	public void Add_Donor() throws InterruptedException {
-//		Setup();
-		WebDriverManager.chromedriver().setup();
-		ChromeOptions op = new ChromeOptions();
-		op.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(op);
-		driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         // Login...
@@ -124,13 +119,6 @@ public class AddDonor extends BaseClass {
         //popup
         WebElement popup = driver.findElement(By.xpath("//div[@id='systemMessagesDiv']//button[@type='button'][normalize-space()='×']"));
         popup.click();
-        //close driver
-        Thread.sleep(10000);
-//        driver.close();
         
 	}
-//	@AfterMethod
-//	public void cb() {
-//		driver.close();
-//	}
 }

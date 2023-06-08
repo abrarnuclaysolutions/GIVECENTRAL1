@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -37,16 +39,12 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-//@Listeners(com.utility.Listenerclass.class)
+@Listeners(com.utility.Listenerclass.class)
 public class Make_Guest_Payment extends BaseClass {
 	@Test
 	public void MakeGuestPayment() throws InterruptedException {
-		Setup();
-//		ChromeOptions op = new ChromeOptions();
-//        op.addArguments("--remote-allow-origins=*");
-//        WebDriver driver = new ChromeDriver(op);
-//        driver.manage().window().maximize();
-        driver.get("https://www.givecentral.org/admin/");
+		//URL
+		driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         // Login...
         driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
@@ -137,8 +135,4 @@ public class Make_Guest_Payment extends BaseClass {
         submit.click();
         Thread.sleep(6000);
 	}
-//	@AfterMethod
-//	public void cb() {
-//		driver.close();
-//	}
 }

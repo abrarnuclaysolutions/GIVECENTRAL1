@@ -1,51 +1,20 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.UUID;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-//@Listeners(com.utility.Listenerclass.class)
+@Listeners(com.utility.Listenerclass.class)
 public class Pladged_Event extends BaseClass {
 	@Test
 	public void PladgedEvent() throws InterruptedException {
-		Setup();
-//		ChromeOptions op = new ChromeOptions();
-//        op.addArguments("--remote-allow-origins=*");
-//        WebDriver driver = new ChromeDriver(op);
-//        driver.manage().window().maximize();
+		//URL
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         // Login...     
@@ -123,17 +92,10 @@ public class Pladged_Event extends BaseClass {
          //submit
          WebElement submit = driver.findElement(By.cssSelector("button[class='btn btn-primary btn-shd addEvent freqType']"));
          submit.click();
-//         close driver
-         Thread.sleep(6000);
-//         driver.close();
 
     }
     static String usingRandomUUID() {
         UUID randomUUID = UUID.randomUUID();
         return randomUUID.toString().replaceAll("_", "");
       }
-//    @AfterMethod
-//    public void cb() {
-//    	driver.close();
-//    }
 }

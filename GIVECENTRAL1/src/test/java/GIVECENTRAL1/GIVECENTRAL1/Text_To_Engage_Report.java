@@ -13,6 +13,8 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -34,16 +36,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-//@Listeners(com.utility.Listenerclass.class)
+@Listeners(com.utility.Listenerclass.class)
 public class Text_To_Engage_Report extends BaseClass {
 	@Test
 	public void TextToEngageReport() throws InterruptedException {
-		Setup();
-//		ChromeOptions op = new ChromeOptions();
-//        op.addArguments("--remote-allow-origins=*");
-//        op.addArguments("incognito");
-//        WebDriver driver = new ChromeDriver(op);
-//        driver.manage().window().maximize();
+		//URL
         driver.get("https://www.givecentral.org/text-to-give/36934");
         //first name
         driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys("abrar");
@@ -87,7 +84,7 @@ public class Text_To_Engage_Report extends BaseClass {
       //Click on Reports
         Thread.sleep(10000);
         WebDriverWait rp = new WebDriverWait(driver,Duration.ofSeconds(20));
-        WebElement rpc = rp.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[3]/a[1]/span[1]")));
+        WebElement rpc = rp.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[4]/a[1]/span[1]")));
         rpc.click();
         Thread.sleep(5000);
         WebDriverWait tter = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -99,23 +96,17 @@ public class Text_To_Engage_Report extends BaseClass {
         WebElement td = driver.findElement(By.xpath("//input[@id='date_from1']"));
         td.click();
         
-        WebElement seltd = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class='  ui-datepicker-today' or @class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-today']"));
+        WebElement seltd = driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class='  ui-datepicker-today' or @class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-today' or @class=' ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today']"));
         seltd.click();
         WebElement apply = driver.findElement(By.xpath("//input[@id='submitForm']"));
         js.executeScript("arguments[0].scrollIntoView();", apply);
         apply.click();
         
-        WebElement searchicon = driver.findElement(By.xpath("//input[@id='searchboxCustom ']"));
+        WebElement searchicon = driver.findElement(By.xpath("//input[@id='searchboxCustom']"));
         searchicon.click();
         searchicon.sendKeys(useridtext);
-        //close driver
-        Thread.sleep(5000);
-//        driver.close();
+        Thread.sleep(10000);
         
 	}
-//	@AfterMethod
-//	public void cb() {
-//		driver.close();
-//	}
 	
 }

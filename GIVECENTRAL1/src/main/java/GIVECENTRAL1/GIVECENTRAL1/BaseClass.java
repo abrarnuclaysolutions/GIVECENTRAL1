@@ -10,8 +10,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -33,9 +35,13 @@ public class BaseClass extends ExtentReport {
 	
 	public static WebDriver driver;
 	//Chrome Driver Setup
+	@BeforeSuite
+	public void BeforeSuite() {
+		ExtentReport.setexent();
+	}
 	@BeforeMethod
 	public void Setup() {
-		WebDriverManager.chromedriver().setup();
+//		WebDriverManager.chromedriver().setup();
 		ChromeOptions op = new ChromeOptions();
 		op.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(op);
@@ -60,10 +66,7 @@ public class BaseClass extends ExtentReport {
 		return gap;
 	}
 	
-	@BeforeSuite
-	public void BeforeSuite() {
-		ExtentReport.setexent();
-	}
+	
 
 	@AfterSuite
 	public void AfterSuite() {

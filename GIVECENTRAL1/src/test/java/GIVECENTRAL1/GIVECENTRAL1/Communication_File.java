@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
@@ -43,17 +45,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-//@Listeners(com.utility.Listenerclass.class)
-
+@Listeners(com.utility.Listenerclass.class)
 public class Communication_File extends BaseClass {
-//	WebDriver driver;
 	@Test
 	public void Comm_file() throws InterruptedException {
-		Setup();
-//		ChromeOptions op = new ChromeOptions();
-//        op.addArguments("--remote-allow-origins=*");
-//        driver = new ChromeDriver(op);
-//        driver.manage().window().maximize();
+		//URL
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
          // object of javascript
@@ -76,12 +72,13 @@ public class Communication_File extends BaseClass {
                  .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
          clicklogin.click();
          //click on communication
-         Thread.sleep(10000);
+         Thread.sleep(7000);
          WebDriverWait comm = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement communication = comm.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Communication']")));
+        js.executeScript("arguments[0].scrollIntoView();", communication);
         communication.click();
         //click on new communication
-        Thread.sleep(6000);
+        Thread.sleep(5000);
         WebDriverWait newcomm = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement newcommunication = newcomm.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='New Communication Portal (Beta)']"))); 
         js.executeScript("arguments[0].scrollIntoView();", newcommunication);
@@ -174,11 +171,5 @@ public class Communication_File extends BaseClass {
         WebElement btdb = driver.findElement(By.xpath("//body/div[@id='emailSent']/div[1]/div[1]/div[1]/a[1]"));
         Actions btd = new Actions(driver);
         btd.moveToElement(btdb).click().perform();
-        
-        Thread.sleep(10000);
 	}
-//	@AfterMethod
-//	public void cb() {
-//		driver.close();
-//	}
 }

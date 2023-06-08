@@ -1,28 +1,9 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
+
 import java.time.Duration;
 import java.util.Random;
 
@@ -32,20 +13,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-//@Listeners(com.utility.Listenerclass.class)
+@Listeners(com.utility.Listenerclass.class)
 public class Express_Setup_Manage_Auction extends BaseClass {
 	@Test
 	public void Manage_Auction() throws InterruptedException {
-		Setup();
-//		ChromeOptions op = new ChromeOptions();
-//		op.addArguments("--remote-allow-origins=*");
-//		WebDriver driver = new ChromeDriver(op);
-//		driver.manage().window().maximize();
 		// URL
 		driver.get("https://www.givecentral.org/admin");
 //		javascript object
@@ -717,9 +691,4 @@ public class Express_Setup_Manage_Auction extends BaseClass {
 //		js.executeScript("arguments[0].scrollIntoView();", eta);
 //		eta.click();
 	}
-//	@AfterMethod
-//	public void cba() throws InterruptedException {
-//		Thread.sleep(5000);
-//		driver.close();
-//	}
 }

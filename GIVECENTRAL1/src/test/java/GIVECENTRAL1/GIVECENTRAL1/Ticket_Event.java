@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -42,12 +44,7 @@ import org.testng.annotations.Test;
 public class Ticket_Event extends BaseClass {
 	@Test
 	public void TicketEvent() throws InterruptedException {
-		Setup();
-//		ChromeOptions op = new ChromeOptions();
-//		op.addArguments("--remote-allow-origins=*");
-//		
-//		WebDriver driver = new ChromeDriver(op);
-//		driver.manage().window().maximize();
+		//URL
 		driver.get("https://www.givecentral.org/admin/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		// Login...
@@ -132,17 +129,10 @@ public class Ticket_Event extends BaseClass {
 				.findElement(By.xpath("//button[@class='btn btn-primary btn-shd addEvent freqType']"));
 		js.executeScript("arguments[0].scrollIntoView();", submit);
 		submit.click();
-//		close driver
-		Thread.sleep(5000);
-//		driver.close();
 	}
 
 	static String usingRandomUUID() {
 		UUID randomUUID = UUID.randomUUID();
 		return randomUUID.toString().replaceAll("_", "");
 	}
-//	@AfterMethod
-//	public void cb() {
-//		driver.close();
-//	}
 }

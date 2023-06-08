@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -45,16 +47,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-//@Listeners(com.utility.Listenerclass.class)
+@Listeners(com.utility.Listenerclass.class)
 public class Dynamic_Page3 extends BaseClass {
-//	WebDriver driver;
 	@Test
 	public void DynamicPage3() throws InterruptedException {
-		Setup();
-//		ChromeOptions op = new ChromeOptions();
-//        op.addArguments("--remote-allow-origins=*");
-//        WebDriver driver = new ChromeDriver(op);
-//        driver.manage().window().maximize();
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
          // object of javascript
@@ -78,7 +74,7 @@ public class Dynamic_Page3 extends BaseClass {
                  .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
          clicklogin.click();
          //click on Dynamic pages
-         Thread.sleep(10000);
+         Thread.sleep(7000);
          WebDriverWait dynamicwait = new WebDriverWait(driver,Duration.ofSeconds(20));
          WebElement clickdynamic = dynamicwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Dynamic Pages']")));
          js.executeScript("arguments[0].scrollIntoView();", clickdynamic);
@@ -228,9 +224,4 @@ public class Dynamic_Page3 extends BaseClass {
         UUID randomUUID = UUID.randomUUID();
         return randomUUID.toString().replaceAll("_", "");
       }
-//    @AfterMethod
-//    public void cb() {
-//    	driver.close();
-//    }
-
 }
