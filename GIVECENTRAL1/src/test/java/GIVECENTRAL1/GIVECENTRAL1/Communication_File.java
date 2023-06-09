@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
@@ -52,28 +53,29 @@ public class Communication_File extends BaseClass {
 		//URL
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-         // object of javascript
-         JavascriptExecutor js = (JavascriptExecutor)driver;
-         // Login form
-         // user name
-         WebDriverWait waitofusername = new WebDriverWait(driver, Duration.ofSeconds(20));
-         WebElement elementofusername = waitofusername
-                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#username")));
-         elementofusername.sendKeys("abrark_gc");
-         // password
-         WebDriverWait waitofpass = new WebDriverWait(driver, Duration.ofSeconds(20));
-         WebElement elementofpass = waitofpass
-                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
-         elementofpass.sendKeys("tiger@123456789");
+        // object of javascript
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        // Login form
+        // user name
+        WebDriverWait waitofusername = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement elementofusername = waitofusername.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#username")));
+        elementofusername.sendKeys("abrark_gc");
+        // password
+        WebDriverWait waitofpass = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement elementofpass = waitofpass.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
+        elementofpass.sendKeys("tiger@123456789");
  
-         // login button
-         WebDriverWait waitoflogin = new WebDriverWait(driver, Duration.ofSeconds(20));
-         WebElement clicklogin = waitoflogin
-                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
-         clicklogin.click();
-         //click on communication
-         Thread.sleep(7000);
-         WebDriverWait comm = new WebDriverWait(driver, Duration.ofSeconds(20));
+        // login button
+        WebDriverWait waitoflogin = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement clicklogin = waitoflogin.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
+        clicklogin.click();
+       //remove popup
+        Thread.sleep(4000);
+        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        icon.click();
+        //click on communication
+        Thread.sleep(7000);
+        WebDriverWait comm = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement communication = comm.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Communication']")));
         js.executeScript("arguments[0].scrollIntoView();", communication);
         communication.click();

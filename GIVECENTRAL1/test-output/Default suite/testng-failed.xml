@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction">
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Text_To_Engage_Report">
         <methods>
           <include name="Setup"/>
+          <include name="TextToEngageReport"/>
           <include name="AfterSuite"/>
           <include name="BeforeSuite"/>
-          <include name="Manage_Auction"/>
           <include name="cb"/>
         </methods>
-      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction -->
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Text_To_Engage_Report -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

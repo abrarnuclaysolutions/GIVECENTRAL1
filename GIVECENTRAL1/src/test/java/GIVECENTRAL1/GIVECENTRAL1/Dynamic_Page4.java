@@ -1,6 +1,7 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.time.Duration;
@@ -43,6 +44,10 @@ public class Dynamic_Page4 extends BaseClass {
 		WebElement clicklogin = waitoflogin
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
 		clicklogin.click();
+		//remove popup
+        Thread.sleep(4000);
+        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        icon.click();
 		// click on Dynamic pages
 		Thread.sleep(5000);
 		WebDriverWait dynamicwait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -147,16 +152,16 @@ public class Dynamic_Page4 extends BaseClass {
 		WebElement submit = driver.findElement(By.cssSelector("input[value='Submit']"));
 		js.executeScript("arguments[0].scrollIntoView();", submit);
 		submit.click();
-		Thread.sleep(5000);
-		driver.get("https://www.givecentral.org/admin/show-appeal-pages/add-new-form");
-		//click on close
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//body/div[@id='systemMessagesDiv']/div[1]/div[1]/div[1]/button[1]")).click();
-        //copy URL
-        driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[1]/a[1]")).click();
-        //close driver
-        Thread.sleep(5000);
-        driver.close();
+//		Thread.sleep(5000);
+//		driver.get("https://www.givecentral.org/admin/show-appeal-pages/add-new-form");
+//		//click on close
+//        Thread.sleep(1000);
+//        driver.findElement(By.xpath("//body/div[@id='systemMessagesDiv']/div[1]/div[1]/div[1]/button[1]")).click();
+//        //copy URL
+//        driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[1]/a[1]")).click();
+//        //close driver
+//        Thread.sleep(5000);
+//        driver.close();
         //open url
 //        op.addArguments("--remote-allow-origins=*");
 //        ChromeOptions op = new ChromeOptions();

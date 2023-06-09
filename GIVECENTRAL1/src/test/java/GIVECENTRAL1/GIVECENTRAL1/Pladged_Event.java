@@ -1,5 +1,6 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.time.Duration;
@@ -34,6 +35,10 @@ public class Pladged_Event extends BaseClass {
         WebElement clicklogin = waitoflogin
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
         clicklogin.click();
+      //remove popup
+        Thread.sleep(4000);
+        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        icon.click();
         //click on event
         Thread.sleep(10000);
         WebDriverWait eventwait = new WebDriverWait(driver, Duration.ofSeconds(20));

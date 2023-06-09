@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -73,6 +74,10 @@ public class Dynamic_Page3 extends BaseClass {
          WebElement clicklogin = waitoflogin
                  .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
          clicklogin.click();
+       //remove popup
+         Thread.sleep(4000);
+         WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+         icon.click();
          //click on Dynamic pages
          Thread.sleep(7000);
          WebDriverWait dynamicwait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -82,7 +87,7 @@ public class Dynamic_Page3 extends BaseClass {
          //click on personalized giving pages
          Thread.sleep(5000);
          WebDriverWait personalwait = new WebDriverWait(driver,Duration.ofSeconds(20));
-         WebElement personalclick = personalwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(3) > div:nth-child(9) > nav:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(14) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(1)")));
+         WebElement personalclick = personalwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Personalized Giving Pages')]")));
          personalclick.click();
          //click on add new 
          WebElement addnew = driver.findElement(By.cssSelector(".uploader.pull-right"));

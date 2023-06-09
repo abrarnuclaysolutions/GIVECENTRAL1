@@ -8,9 +8,9 @@
     <classes>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Crowdfounding_Event"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.GiveCentral_First"/>
-      <class name="GIVECENTRAL1.GIVECENTRAL1.Normal_Event"/>
-      <class name="GIVECENTRAL1.GIVECENTRAL1.AddDonor"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Ticket_Event"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.AddDonor"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Normal_Event"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Text_To_Engage_Report"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Pladged_Event"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page2"/>
@@ -20,8 +20,8 @@
       <class name="GIVECENTRAL1.GIVECENTRAL1.AddNewEvent"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Make_Guest_Payment"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Communication_File"/>
-      <class name="GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Create_Pledge"/>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction"/>
     </classes>
   </test> <!-- GIVECENTRAL -->
 </suite> <!-- GIVECENTRAL -->

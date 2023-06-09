@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
@@ -58,20 +59,23 @@ public class AddDonor extends BaseClass {
         WebElement clicklogin = waitoflogin
                         .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
         clicklogin.click();
+        //remove popup
+        Thread.sleep(4000);
+        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        icon.click();
         // click on donors
         Thread.sleep(10000);
         WebDriverWait waitofdonor = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement elementofdonor = waitofdonor
-                        .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
-                                        "body > div:nth-child(3) > div:nth-child(9) > nav:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(9) > a:nth-child(1)")));
+        WebElement elementofdonor = waitofdonor.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[10]/a[1]/span[1]")));
         elementofdonor.click();
-        // click on add donor
+        // click on add new donor
         Thread.sleep(7000);
         WebDriverWait waitofadddonor = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement elementofadddonor = waitofadddonor.until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//span[@class='submenu-title'][normalize-space()='Add New Donor']")));
+                        By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[10]/ul[1]/li[1]/a[1]/span[1]")));
         elementofadddonor.click();
         // first name
+        Thread.sleep(4000);
         WebElement fname = driver.findElement(By.cssSelector("input[name='donor_first_name']"));
         fname.sendKeys("abrar");
         // last name

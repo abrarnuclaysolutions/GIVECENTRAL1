@@ -1,6 +1,7 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.ArrayList;
 
@@ -25,6 +26,10 @@ public class Create_Pledge extends BaseClass {
         driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
         driver.findElement(By.cssSelector("#password")).sendKeys("tiger@123456789");// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
+      //remove popup
+        Thread.sleep(4000);
+        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        icon.click();
         // Click on Donors
         Thread.sleep(10000);
         WebDriverWait waitofdonors = new WebDriverWait(driver, Duration.ofSeconds(20));
