@@ -34,6 +34,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass extends ExtentReport {
 	
 	public static WebDriver driver;
+	public static WebDriver driver1;
+
 	//Chrome Driver Setup
 	@BeforeSuite
 	public void BeforeSuite() {
@@ -75,5 +77,6 @@ public class BaseClass extends ExtentReport {
 	@AfterMethod
 	public void cb() {
 		driver.close();
+//		driver1.close();
 	}
 }

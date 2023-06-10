@@ -120,7 +120,7 @@ public class Create_Pledge extends BaseClass {
         //Click on Reports
         Thread.sleep(7000);
         WebDriverWait rp = new WebDriverWait(driver,Duration.ofSeconds(20));
-        WebElement rpc = rp.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[3]/a[1]/span[1]")));
+        WebElement rpc = rp.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[4]/a[1]/span[1]")));
         rpc.click();
         //click on transaction report
         WebElement tr = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[3]/ul[1]/li[11]/a[1]/span[1]"));

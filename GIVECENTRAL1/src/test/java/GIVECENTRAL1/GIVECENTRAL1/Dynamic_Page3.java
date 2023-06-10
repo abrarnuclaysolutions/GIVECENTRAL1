@@ -156,7 +156,7 @@ public class Dynamic_Page3 extends BaseClass {
         driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[1]/a[1]")).click();
         //close driver
         Thread.sleep(5000);
-        driver.close();
+//        driver.close();
         //open url
 //        op.addArguments("--remote-allow-origins=*");
         ChromeOptions op = new ChromeOptions();

@@ -134,11 +134,12 @@ public class Dynamic_Page1 extends BaseClass {
         paymethod2.click();
 
         //submit
-        WebElement submit = driver.findElement(By.cssSelector("input[value='Submit']"));
+        Thread.sleep(2000);
+        WebElement submit = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='content']/form[@id='dynamicFormBuilder']/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[87]/div[1]/input[1]"));
         js.executeScript("arguments[0].scrollIntoView();", submit);
         submit.click();
-        //close 
-        Thread.sleep(1000);
+        //
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//body/div[@id='systemMessagesDiv']/div[1]/div[1]/div[1]/button[1]")).click();
         //copy URL
         driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[1]/a[1]")).click();
@@ -206,10 +207,11 @@ public class Dynamic_Page1 extends BaseClass {
         driver1.findElement(By.xpath("//button[@class='btn btn-success']")).click();
         //close driver
 //        Thread.sleep(10000);
-        driver1.close();
+//        driver1.close();
     }
     static String usingRandomUUID() {
         UUID randomUUID = UUID.randomUUID();
         return randomUUID.toString().replaceAll("_", "");
       }
+    
 }

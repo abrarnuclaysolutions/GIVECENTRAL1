@@ -158,7 +158,7 @@ public class Dynamic_Page2 extends BaseClass {
         //copy URL
         driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[1]/a[1]")).click();
         Thread.sleep(5000);
-        driver.close();
+//        driver.close();
         ChromeOptions op = new ChromeOptions();
 		op.addArguments("--remote-allow-origins=*");
         op.addArguments("incognito");
@@ -222,7 +222,7 @@ public class Dynamic_Page2 extends BaseClass {
         Thread.sleep(2000);
         driver1.findElement(By.xpath("//button[@class='btn btn-success']")).click();
 //        Thread.sleep(10000);
-        driver1.close();
+//        driver1.close();
     }
     static String usingRandomUUID() {
         UUID randomUUID = UUID.randomUUID();
