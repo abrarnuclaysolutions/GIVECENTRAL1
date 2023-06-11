@@ -123,7 +123,7 @@ public class Create_Pledge extends BaseClass {
         WebElement rpc = rp.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[4]/a[1]/span[1]")));
         rpc.click();
         //click on transaction report
-        WebElement tr = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[3]/ul[1]/li[11]/a[1]/span[1]"));
+        WebElement tr = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[4]/ul[1]/li[11]/a[1]/span[1]"));
         tr.click();
         //click on advanced report
         WebElement adr = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='content']/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/a[1]/img[1]"));

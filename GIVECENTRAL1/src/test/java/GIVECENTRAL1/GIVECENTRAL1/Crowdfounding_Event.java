@@ -78,7 +78,7 @@ public class Crowdfounding_Event extends BaseClass {
         //click on add new
         Thread.sleep(6000);
         WebDriverWait addnewwait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement addnew = addnewwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Add New']")));
+        WebElement addnew = addnewwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/nav[@id='sidebar']/div[1]/ul[1]/li[9]/ul[1]/li[3]/a[1]/span[1]")));
         addnew.click();
         //event name
         String randomStr = usingRandomUUID();
