@@ -27,7 +27,7 @@ public class Express_Setup_Manage_Auction extends BaseClass {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		// Login form
 		driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
-		driver.findElement(By.cssSelector("#password")).sendKeys("tiger@123456789");// password
+		driver.findElement(By.cssSelector("#password")).sendKeys("loc@lbm@2023!");// password
 		driver.findElement(By.cssSelector("#logCnf")).click();// login button
 		//remove popup
         Thread.sleep(4000);

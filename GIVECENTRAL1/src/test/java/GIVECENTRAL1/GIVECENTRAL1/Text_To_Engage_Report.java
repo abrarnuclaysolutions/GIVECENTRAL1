@@ -80,7 +80,7 @@ public class Text_To_Engage_Report extends BaseClass {
 //        driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
         driver.get("https://www.givecentral.org/admin/");
         driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
-        driver.findElement(By.cssSelector("#password")).sendKeys("tiger@123456789");// password
+        driver.findElement(By.cssSelector("#password")).sendKeys("loc@lbm@2023!");// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
       //remove popup
         Thread.sleep(4000);

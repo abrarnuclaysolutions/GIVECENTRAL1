@@ -63,7 +63,7 @@ public class Communication_File extends BaseClass {
         // password
         WebDriverWait waitofpass = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement elementofpass = waitofpass.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
-        elementofpass.sendKeys("tiger@123456789");
+        elementofpass.sendKeys("loc@lbm@2023!");
  
         // login button
         WebDriverWait waitoflogin = new WebDriverWait(driver, Duration.ofSeconds(20));

@@ -24,7 +24,7 @@ public class Create_Pledge extends BaseClass {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         // Login...
         driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
-        driver.findElement(By.cssSelector("#password")).sendKeys("tiger@123456789");// password
+        driver.findElement(By.cssSelector("#password")).sendKeys("loc@lbm@2023!");// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
       //remove popup
         Thread.sleep(4000);

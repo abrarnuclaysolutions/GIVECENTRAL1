@@ -54,7 +54,7 @@ public class AddNewEvent extends BaseClass {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         // Login...
         driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
-        driver.findElement(By.cssSelector("#password")).sendKeys("tiger@123456789");// password
+        driver.findElement(By.cssSelector("#password")).sendKeys("loc@lbm@2023!");// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
         //URL of profile
         driver.get("https://www.givecentral.org/admin/donor-details/profile/kaif12345");

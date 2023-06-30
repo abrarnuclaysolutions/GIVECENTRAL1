@@ -28,7 +28,7 @@ public class Normal_Event extends BaseClass {
         WebDriverWait waitofpass = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement elementofpass = waitofpass
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
-        elementofpass.sendKeys("tiger@123456789");
+        elementofpass.sendKeys("loc@lbm@2023!");
         // driver.findElement(By.cssSelector("#password")).sendKeys("tiger@12345678");//
         // password
         WebDriverWait waitoflogin = new WebDriverWait(driver, Duration.ofSeconds(20));

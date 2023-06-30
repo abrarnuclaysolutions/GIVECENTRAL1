@@ -49,7 +49,7 @@ public class Make_Guest_Payment extends BaseClass {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         // Login...
         driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
-        driver.findElement(By.cssSelector("#password")).sendKeys("tiger@123456789");// password
+        driver.findElement(By.cssSelector("#password")).sendKeys("loc@lbm@2023!");// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
         //javascript object
         JavascriptExecutor js = (JavascriptExecutor)driver;
