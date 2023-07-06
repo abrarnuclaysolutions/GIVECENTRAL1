@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-30T23:00:56 IST" name="Default suite" finished-at="2023-06-30T23:02:17 IST" duration-ms="81290">
+  <suite started-at="2023-07-06T17:06:25 IST" name="Default suite" finished-at="2023-07-06T17:08:36 IST" duration-ms="131284">
     <groups>
     </groups>
-    <test started-at="2023-06-30T23:00:56 IST" name="Default test" finished-at="2023-06-30T23:02:17 IST" duration-ms="81290">
-      <class name="GIVECENTRAL1.GIVECENTRAL1.AddNewEvent">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.AddNewEvent@36c88a32]" started-at="2023-06-30T23:00:55 IST" name="BeforeSuite" finished-at="2023-06-30T23:00:56 IST" duration-ms="571" status="PASS">
+    <test started-at="2023-07-06T17:06:25 IST" name="Default test" finished-at="2023-07-06T17:08:36 IST" duration-ms="131284">
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Create_Pledge">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.Create_Pledge@36c88a32]" started-at="2023-07-06T17:06:24 IST" name="BeforeSuite" finished-at="2023-07-06T17:06:25 IST" duration-ms="356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.AddNewEvent@36c88a32]" started-at="2023-06-30T23:00:56 IST" name="Setup" finished-at="2023-06-30T23:01:01 IST" duration-ms="4727" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.Create_Pledge@36c88a32]" started-at="2023-07-06T17:06:25 IST" name="Setup" finished-at="2023-07-06T17:06:31 IST" duration-ms="6502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Add_New_Event()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.AddNewEvent@36c88a32]" started-at="2023-06-30T23:01:01 IST" name="Add_New_Event" finished-at="2023-06-30T23:02:17 IST" duration-ms="76298" status="PASS">
+        <test-method signature="CreatePladge()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.Create_Pledge@36c88a32]" started-at="2023-07-06T17:06:31 IST" name="CreatePladge" finished-at="2023-07-06T17:08:36 IST" duration-ms="124649" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Add_New_Event -->
-        <test-method is-config="true" signature="cb()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.AddNewEvent@36c88a32]" started-at="2023-06-30T23:02:17 IST" name="cb" finished-at="2023-06-30T23:02:17 IST" duration-ms="189" status="PASS">
+        </test-method> <!-- CreatePladge -->
+        <test-method is-config="true" signature="cb()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.Create_Pledge@36c88a32]" started-at="2023-07-06T17:08:36 IST" name="cb" finished-at="2023-07-06T17:08:36 IST" duration-ms="84" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cb -->
-        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.AddNewEvent@36c88a32]" started-at="2023-06-30T23:02:22 IST" name="AfterSuite" finished-at="2023-06-30T23:02:23 IST" duration-ms="558" status="PASS">
+        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:GIVECENTRAL1.GIVECENTRAL1.Create_Pledge@36c88a32]" started-at="2023-07-06T17:08:41 IST" name="AfterSuite" finished-at="2023-07-06T17:08:42 IST" duration-ms="465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterSuite -->
-      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.AddNewEvent -->
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Create_Pledge -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

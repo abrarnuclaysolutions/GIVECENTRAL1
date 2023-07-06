@@ -138,11 +138,11 @@ public class Create_Pledge extends BaseClass {
         WebElement td = driver.findElement(By.xpath("//input[@id='date_from1']"));
         td.click();
 //        Thread.sleep(2000);
-        driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class=' ui-datepicker-today']")).click();
+        driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class=' ui-datepicker-today' or @class=' ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today']")).click();
         //select date2
         WebElement td2 = driver.findElement(By.xpath("//div[@id='ui-datepicker-div']"));
         td2.click();
-        driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class=' ui-datepicker-today']")).click();
+        driver.findElement(By.xpath("//td[@class=' ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today' or @class=' ui-datepicker-week-end  ui-datepicker-today' or @class=' ui-datepicker-today' or @class=' ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today']")).click();
         //payment method type
         WebElement pmt = driver.findElement(By.xpath("//select[@id='payment_method_type']"));
         Select all = new Select(pmt);
