@@ -1,4 +1,4 @@
-package APITESTING.API;
+package practiceproject;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;

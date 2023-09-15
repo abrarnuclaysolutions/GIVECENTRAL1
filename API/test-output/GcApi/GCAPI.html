@@ -1,0 +1,432 @@
+<html>
+<head>
+<title>TestNG:  GCAPI</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>GCAPI</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>61/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Sep 16 03:17:42 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>167 seconds (167833 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='APITESTING.API.Get_API.Get_api()'><b>Get_api</b><br>Test class: APITESTING.API.Get_API</td>
+<td><div><pre>java.lang.AssertionError: Tobias expected:&lt;Tobias&gt; but was:&lt;Verify first name&gt;
+	at APITESTING.API.Get_API.Get_api(Get_API.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace348731252", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace348731252'><pre>java.lang.AssertionError: Tobias expected:&lt;Tobias&gt; but was:&lt;Verify first name&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at APITESTING.API.Get_API.Get_api(Get_API.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>APITESTING.API.Get_API@7fa98a66</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='APITESTING.API.Ticket_Event.paymentmethod()'><b>paymentmethod</b><br>Test class: APITESTING.API.Ticket_Event</td>
+<td></td>
+<td>7</td>
+<td>APITESTING.API.Ticket_Event@323b36e0</td></tr>
+<tr>
+<td title='APITESTING.API.DeleteCrowdfundingEvent.crowdfunding()'><b>crowdfunding</b><br>Test class: APITESTING.API.DeleteCrowdfundingEvent</td>
+<td></td>
+<td>2</td>
+<td>APITESTING.API.DeleteCrowdfundingEvent@2e005c4b</td></tr>
+<tr>
+<td title='APITESTING.API.Ticket_Event.giftbox()'><b>giftbox</b><br>Test class: APITESTING.API.Ticket_Event</td>
+<td></td>
+<td>2</td>
+<td>APITESTING.API.Ticket_Event@323b36e0</td></tr>
+<tr>
+<td title='APITESTING.API.CrowdFunding.signup()'><b>signup</b><br>Test class: APITESTING.API.CrowdFunding</td>
+<td></td>
+<td>5</td>
+<td>APITESTING.API.CrowdFunding@4f6ee6e4</td></tr>
+<tr>
+<td title='APITESTING.API.DeleteNormalEvent.oauth()'><b>oauth</b><br>Test class: APITESTING.API.DeleteNormalEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeleteNormalEvent@7b9a4292</td></tr>
+<tr>
+<td title='APITESTING.API.PatchDonor.Update_Donor()'><b>Update_Donor</b><br>Test class: APITESTING.API.PatchDonor</td>
+<td></td>
+<td>5</td>
+<td>APITESTING.API.PatchDonor@5af3afd9</td></tr>
+<tr>
+<td title='APITESTING.API.LoginAPI.giftbox()'><b>giftbox</b><br>Test class: APITESTING.API.LoginAPI</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.LoginAPI@a514af7</td></tr>
+<tr>
+<td title='APITESTING.API.Locationapi.locationapi()'><b>locationapi</b><br>Test class: APITESTING.API.Locationapi</td>
+<td></td>
+<td>3</td>
+<td>APITESTING.API.Locationapi@4a94ee4</td></tr>
+<tr>
+<td title='APITESTING.API.Pledge_Event.oauth()'><b>oauth</b><br>Test class: APITESTING.API.Pledge_Event</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.Pledge_Event@4fb0f2b9</td></tr>
+<tr>
+<td title='APITESTING.API.DeleteNormalEvent.delete_normal_event()'><b>delete_normal_event</b><br>Test class: APITESTING.API.DeleteNormalEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeleteNormalEvent@7b9a4292</td></tr>
+<tr>
+<td title='APITESTING.API.Ticket_Event.event()'><b>event</b><br>Test class: APITESTING.API.Ticket_Event</td>
+<td></td>
+<td>2</td>
+<td>APITESTING.API.Ticket_Event@323b36e0</td></tr>
+<tr>
+<td title='APITESTING.API.Post_API.postapi()'><b>postapi</b><br>Test class: APITESTING.API.Post_API</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.Post_API@47af7f3d</td></tr>
+<tr>
+<td title='APITESTING.API.GetDonor.oauth()'><b>oauth</b><br>Test class: APITESTING.API.GetDonor</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.GetDonor@359f7cdf</td></tr>
+<tr>
+<td title='APITESTING.API.Pledge_Event.donor()'><b>donor</b><br>Test class: APITESTING.API.Pledge_Event</td>
+<td></td>
+<td>7</td>
+<td>APITESTING.API.Pledge_Event@4fb0f2b9</td></tr>
+<tr>
+<td title='APITESTING.API.DeleteCrowdfundingEvent.oauth()'><b>oauth</b><br>Test class: APITESTING.API.DeleteCrowdfundingEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeleteCrowdfundingEvent@2e005c4b</td></tr>
+<tr>
+<td title='APITESTING.API.GetNormalEvent.get_normal_event()'><b>get_normal_event</b><br>Test class: APITESTING.API.GetNormalEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.GetNormalEvent@6b927fb</td></tr>
+<tr>
+<td title='APITESTING.API.apidemo.apigetcall()'><b>apigetcall</b><br>Test class: APITESTING.API.apidemo</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.apidemo@74e52303</td></tr>
+<tr>
+<td title='APITESTING.API.Basic_Authentication.basicauth()'><b>basicauth</b><br>Test class: APITESTING.API.Basic_Authentication</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.Basic_Authentication@6aba2b86</td></tr>
+<tr>
+<td title='APITESTING.API.CrowdFunding.donor()'><b>donor</b><br>Test class: APITESTING.API.CrowdFunding</td>
+<td></td>
+<td>7</td>
+<td>APITESTING.API.CrowdFunding@4f6ee6e4</td></tr>
+<tr>
+<td title='APITESTING.API.Pledge_Event.giftbox()'><b>giftbox</b><br>Test class: APITESTING.API.Pledge_Event</td>
+<td></td>
+<td>2</td>
+<td>APITESTING.API.Pledge_Event@4fb0f2b9</td></tr>
+<tr>
+<td title='APITESTING.API.DeletePledgeEvent.pledgeevent()'><b>pledgeevent</b><br>Test class: APITESTING.API.DeletePledgeEvent</td>
+<td></td>
+<td>2</td>
+<td>APITESTING.API.DeletePledgeEvent@3e58a80e</td></tr>
+<tr>
+<td title='APITESTING.API.Api_Key_Auth.apikeyauth()'><b>apikeyauth</b><br>Test class: APITESTING.API.Api_Key_Auth</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.Api_Key_Auth@1fa268de</td></tr>
+<tr>
+<td title='APITESTING.API.DeletePledgeEvent.delete_pledge_event()'><b>delete_pledge_event</b><br>Test class: APITESTING.API.DeletePledgeEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeletePledgeEvent@3e58a80e</td></tr>
+<tr>
+<td title='APITESTING.API.Ticket_Event.oauth()'><b>oauth</b><br>Test class: APITESTING.API.Ticket_Event</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.Ticket_Event@323b36e0</td></tr>
+<tr>
+<td title='APITESTING.API.GetPledgeEvent.get_pledge_event()'><b>get_pledge_event</b><br>Test class: APITESTING.API.GetPledgeEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.GetPledgeEvent@5ffead27</td></tr>
+<tr>
+<td title='APITESTING.API.CrowdFunding.paymentmethod()'><b>paymentmethod</b><br>Test class: APITESTING.API.CrowdFunding</td>
+<td></td>
+<td>5</td>
+<td>APITESTING.API.CrowdFunding@4f6ee6e4</td></tr>
+<tr>
+<td title='APITESTING.API.LoginAPI.oauth()'><b>oauth</b><br>Test class: APITESTING.API.LoginAPI</td>
+<td></td>
+<td>2</td>
+<td>APITESTING.API.LoginAPI@a514af7</td></tr>
+<tr>
+<td title='APITESTING.API.GetTicketEvent.get_ticket_event()'><b>get_ticket_event</b><br>Test class: APITESTING.API.GetTicketEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.GetTicketEvent@158da8e</td></tr>
+<tr>
+<td title='APITESTING.API.DeleteCrowdfundingEvent.delete_pledge_event()'><b>delete_pledge_event</b><br>Test class: APITESTING.API.DeleteCrowdfundingEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeleteCrowdfundingEvent@2e005c4b</td></tr>
+<tr>
+<td title='APITESTING.API.CrowdFunding.giftbox()'><b>giftbox</b><br>Test class: APITESTING.API.CrowdFunding</td>
+<td></td>
+<td>2</td>
+<td>APITESTING.API.CrowdFunding@4f6ee6e4</td></tr>
+<tr>
+<td title='APITESTING.API.GetCrowdfundingEvent.get_crowdfunding_event()'><b>get_crowdfunding_event</b><br>Test class: APITESTING.API.GetCrowdfundingEvent</td>
+<td></td>
+<td>2</td>
+<td>APITESTING.API.GetCrowdfundingEvent@4466af20</td></tr>
+<tr>
+<td title='APITESTING.API.DeleteTicketEvent.delete_normal_event()'><b>delete_normal_event</b><br>Test class: APITESTING.API.DeleteTicketEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeleteTicketEvent@694abbdc</td></tr>
+<tr>
+<td title='APITESTING.API.BearerTokenAuth.Bearertokenauth()'><b>Bearertokenauth</b><br>Test class: APITESTING.API.BearerTokenAuth</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.BearerTokenAuth@4567f35d</td></tr>
+<tr>
+<td title='APITESTING.API.Delete_API.get464user()'><b>get464user</b><br>Test class: APITESTING.API.Delete_API</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.Delete_API@7c729a55</td></tr>
+<tr>
+<td title='APITESTING.API.Delete_API.deleteapi()'><b>deleteapi</b><br>Test class: APITESTING.API.Delete_API</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.Delete_API@7c729a55</td></tr>
+<tr>
+<td title='APITESTING.API.Pledge_Event.pledgeevent()'><b>pledgeevent</b><br>Test class: APITESTING.API.Pledge_Event</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.Pledge_Event@4fb0f2b9</td></tr>
+<tr>
+<td title='APITESTING.API.CrowdFunding.oauth()'><b>oauth</b><br>Test class: APITESTING.API.CrowdFunding</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.CrowdFunding@4f6ee6e4</td></tr>
+<tr>
+<td title='APITESTING.API.Ticket_Event.donor()'><b>donor</b><br>Test class: APITESTING.API.Ticket_Event</td>
+<td></td>
+<td>7</td>
+<td>APITESTING.API.Ticket_Event@323b36e0</td></tr>
+<tr>
+<td title='APITESTING.API.CrowdFunding.crowdfunding()'><b>crowdfunding</b><br>Test class: APITESTING.API.CrowdFunding</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.CrowdFunding@4f6ee6e4</td></tr>
+<tr>
+<td title='APITESTING.API.LoginAPI.event()'><b>event</b><br>Test class: APITESTING.API.LoginAPI</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.LoginAPI@a514af7</td></tr>
+<tr>
+<td title='APITESTING.API.LoginAPI.Donor()'><b>Donor</b><br>Test class: APITESTING.API.LoginAPI</td>
+<td></td>
+<td>7</td>
+<td>APITESTING.API.LoginAPI@a514af7</td></tr>
+<tr>
+<td title='APITESTING.API.apidemo.apiputcall()'><b>apiputcall</b><br>Test class: APITESTING.API.apidemo</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.apidemo@74e52303</td></tr>
+<tr>
+<td title='APITESTING.API.GetDonor.get_Donor()'><b>get_Donor</b><br>Test class: APITESTING.API.GetDonor</td>
+<td></td>
+<td>5</td>
+<td>APITESTING.API.GetDonor@359f7cdf</td></tr>
+<tr>
+<td title='APITESTING.API.DeleteTicketEvent.oauth()'><b>oauth</b><br>Test class: APITESTING.API.DeleteTicketEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeleteTicketEvent@694abbdc</td></tr>
+<tr>
+<td title='APITESTING.API.LoginAPI.paymentmethod()'><b>paymentmethod</b><br>Test class: APITESTING.API.LoginAPI</td>
+<td></td>
+<td>5</td>
+<td>APITESTING.API.LoginAPI@a514af7</td></tr>
+<tr>
+<td title='APITESTING.API.Put_API.putapi()'><b>putapi</b><br>Test class: APITESTING.API.Put_API</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.Put_API@4fb61f4a</td></tr>
+<tr>
+<td title='APITESTING.API.apidemo.apipostcall()'><b>apipostcall</b><br>Test class: APITESTING.API.apidemo</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.apidemo@74e52303</td></tr>
+<tr>
+<td title='APITESTING.API.Donor.Donor()'><b>Donor</b><br>Test class: APITESTING.API.Donor</td>
+<td></td>
+<td>7</td>
+<td>APITESTING.API.Donor@79924b</td></tr>
+<tr>
+<td title='APITESTING.API.Ticket_Event.signup()'><b>signup</b><br>Test class: APITESTING.API.Ticket_Event</td>
+<td></td>
+<td>7</td>
+<td>APITESTING.API.Ticket_Event@323b36e0</td></tr>
+<tr>
+<td title='APITESTING.API.Signup.signup()'><b>signup</b><br>Test class: APITESTING.API.Signup</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.Signup@6356695f</td></tr>
+<tr>
+<td title='APITESTING.API.Digest_auth.digestauth()'><b>digestauth</b><br>Test class: APITESTING.API.Digest_auth</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.Digest_auth@44ebcd03</td></tr>
+<tr>
+<td title='APITESTING.API.apidemo.apideletecall()'><b>apideletecall</b><br>Test class: APITESTING.API.apidemo</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.apidemo@74e52303</td></tr>
+<tr>
+<td title='APITESTING.API.LoginAPI.signup()'><b>signup</b><br>Test class: APITESTING.API.LoginAPI</td>
+<td></td>
+<td>4</td>
+<td>APITESTING.API.LoginAPI@a514af7</td></tr>
+<tr>
+<td title='APITESTING.API.Donor.oauth()'><b>oauth</b><br>Test class: APITESTING.API.Donor</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.Donor@79924b</td></tr>
+<tr>
+<td title='APITESTING.API.Patch_API.patchapi()'><b>patchapi</b><br>Test class: APITESTING.API.Patch_API</td>
+<td></td>
+<td>0</td>
+<td>APITESTING.API.Patch_API@4f18837a</td></tr>
+<tr>
+<td title='APITESTING.API.DeleteNormalEvent.event()'><b>event</b><br>Test class: APITESTING.API.DeleteNormalEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeleteNormalEvent@7b9a4292</td></tr>
+<tr>
+<td title='APITESTING.API.DeleteTicketEvent.event()'><b>event</b><br>Test class: APITESTING.API.DeleteTicketEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeleteTicketEvent@694abbdc</td></tr>
+<tr>
+<td title='APITESTING.API.Pledge_Event.paymentmethod()'><b>paymentmethod</b><br>Test class: APITESTING.API.Pledge_Event</td>
+<td></td>
+<td>5</td>
+<td>APITESTING.API.Pledge_Event@4fb0f2b9</td></tr>
+<tr>
+<td title='APITESTING.API.PatchDonor.oauth()'><b>oauth</b><br>Test class: APITESTING.API.PatchDonor</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.PatchDonor@5af3afd9</td></tr>
+<tr>
+<td title='APITESTING.API.Pledge_Event.signup()'><b>signup</b><br>Test class: APITESTING.API.Pledge_Event</td>
+<td></td>
+<td>4</td>
+<td>APITESTING.API.Pledge_Event@4fb0f2b9</td></tr>
+<tr>
+<td title='APITESTING.API.DeletePledgeEvent.oauth()'><b>oauth</b><br>Test class: APITESTING.API.DeletePledgeEvent</td>
+<td></td>
+<td>1</td>
+<td>APITESTING.API.DeletePledgeEvent@3e58a80e</td></tr>
+</table><p>
+</body>
+</html>
