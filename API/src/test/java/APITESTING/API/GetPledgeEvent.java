@@ -1,6 +1,7 @@
 package APITESTING.API;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

@@ -1,5 +1,7 @@
 package APITESTING.API;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -20,8 +22,8 @@ public class Get_API {
 		reqspe.queryParam("page", "2");
 		
 		Response res = reqspe.get();
-		Assert.assertEquals(res.getStatusCode(), 200);
-		Assert.assertEquals(res.getBody().asString().contains("Michael"), true);
+		AssertJUnit.assertEquals(res.getStatusCode(), 200);
+		AssertJUnit.assertEquals(res.getBody().asString().contains("Michael"), true);
 		System.out.println(res.getStatusLine());
 		System.out.println(res.getStatusCode());
 		System.out.println(res.getBody().asString());
@@ -31,7 +33,7 @@ public class Get_API {
 //		x.data[2].first_name
 		JsonPath jp = res.jsonPath();
 		String fn = jp.get("data[2].first_name");
-		Assert.assertEquals(fn , "Tobias","Verify first name");
+		AssertJUnit.assertEquals(fn , "Tobias","Verify first name");
 
 	}
 }

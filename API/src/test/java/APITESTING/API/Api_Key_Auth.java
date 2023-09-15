@@ -1,5 +1,7 @@
 package APITESTING.API;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,7 +25,7 @@ public class Api_Key_Auth {
 		
 		Response res = req.get();
 		
-		Assert.assertEquals(res.getStatusLine(), "HTTP/1.1 200 OK");
+		AssertJUnit.assertEquals(res.getStatusLine(), "HTTP/1.1 200 OK");
 		
 		System.out.println();
 		System.out.println("Response Statusline : "+res.getStatusLine());

@@ -1,5 +1,7 @@
 package APITESTING.API;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -38,7 +40,7 @@ public class BearerTokenAuth {
 		
 		req.headers("Authorization", token).contentType(ContentType.JSON).body(jo.toJSONString());
 		Response res = req.post();
-		Assert.assertEquals(res.getStatusCode(), 201);
+		AssertJUnit.assertEquals(res.getStatusCode(), 201);
 		
 		System.out.println("Response Statusline : "+res.getStatusLine());
 		System.out.println("Response ContentType : "+res.getContentType());
