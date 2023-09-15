@@ -15,6 +15,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class GiveCentral_First extends BaseClass {
 	@Test
 	public void GC_First() throws InterruptedException {
+		abcdemo ab = new abcdemo();
+		String password = ab.pass;
+		String username = ab.username;
 		//Website URL with Location
         driver.get("https://www.givecentral.org/location/7/");
         JavascriptExecutor js = (JavascriptExecutor)driver;

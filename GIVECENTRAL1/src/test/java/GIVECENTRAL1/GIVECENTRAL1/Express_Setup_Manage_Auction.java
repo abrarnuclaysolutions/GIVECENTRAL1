@@ -21,13 +21,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Express_Setup_Manage_Auction extends BaseClass {
 	@Test
 	public void Manage_Auction() throws InterruptedException {
+		abcdemo ab = new abcdemo();
+		String password = ab.pass;
+		String username = ab.username;
 		// URL
 		driver.get("https://www.givecentral.org/admin");
 //		javascript object
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		// Login form
-		driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
-		driver.findElement(By.cssSelector("#password")).sendKeys("loc@lbm@2023!");// password
+		driver.findElement(By.cssSelector("#username")).sendKeys(username);// username
+		driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
 		driver.findElement(By.cssSelector("#logCnf")).click();// login button
 		//remove popup
         Thread.sleep(4000);

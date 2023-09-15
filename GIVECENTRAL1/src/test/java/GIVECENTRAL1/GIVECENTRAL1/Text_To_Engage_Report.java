@@ -41,6 +41,9 @@ import org.testng.annotations.Test;
 public class Text_To_Engage_Report extends BaseClass {
 	@Test
 	public void TextToEngageReport() throws InterruptedException {
+		abcdemo ab = new abcdemo();
+		String password = ab.pass;
+		String username = ab.username;
 		//URL
         driver.get("https://www.givecentral.org/text-to-give/36934");
         //first name
@@ -79,8 +82,8 @@ public class Text_To_Engage_Report extends BaseClass {
         Thread.sleep(4000);
 //        driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
         driver.get("https://www.givecentral.org/admin/");
-        driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
-        driver.findElement(By.cssSelector("#password")).sendKeys("loc@lbm@2023!");// password
+        driver.findElement(By.cssSelector("#username")).sendKeys(username);// username
+        driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
       //remove popup
         Thread.sleep(4000);

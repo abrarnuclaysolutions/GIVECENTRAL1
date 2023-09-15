@@ -15,6 +15,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Normal_Event extends BaseClass {
 	@Test
 	public void NormalEvent() throws InterruptedException {
+		abcdemo ab = new abcdemo();
+		String password = ab.pass;
+		String username = ab.username;
 		//URL
 		driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -22,13 +25,13 @@ public class Normal_Event extends BaseClass {
         WebDriverWait waitofusername = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement elementofusername = waitofusername
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#username")));
-        elementofusername.sendKeys("abrark_gc");
+        elementofusername.sendKeys(username);
         // driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");//
         // username
         WebDriverWait waitofpass = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement elementofpass = waitofpass
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
-        elementofpass.sendKeys("loc@lbm@2023!");
+        elementofpass.sendKeys(password);
         // driver.findElement(By.cssSelector("#password")).sendKeys("tiger@12345678");//
         // password
         WebDriverWait waitoflogin = new WebDriverWait(driver, Duration.ofSeconds(20));

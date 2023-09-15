@@ -50,11 +50,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AddNewEvent extends BaseClass {
 	@Test
 	public void Add_New_Event() throws InterruptedException {
+		abcdemo ab = new abcdemo();
+		String password = ab.pass;
+		String username = ab.username;
         driver.get("https://www.givecentral.org/admin/donor-details/profile/kaif12345");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         // Login...
-        driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
-        driver.findElement(By.cssSelector("#password")).sendKeys("loc@lbm@2023!");// password
+        driver.findElement(By.cssSelector("#username")).sendKeys(username);// username
+        driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
         //URL of profile
         driver.get("https://www.givecentral.org/admin/donor-details/profile/kaif12345");

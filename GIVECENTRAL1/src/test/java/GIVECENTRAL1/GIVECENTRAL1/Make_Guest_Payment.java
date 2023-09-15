@@ -44,12 +44,15 @@ import org.testng.annotations.Test;
 public class Make_Guest_Payment extends BaseClass {
 	@Test
 	public void MakeGuestPayment() throws InterruptedException {
+		abcdemo ab = new abcdemo();
+		String password = ab.pass;
+		String username = ab.username;
 		//URL
 		driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         // Login...
-        driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");// username
-        driver.findElement(By.cssSelector("#password")).sendKeys("loc@lbm@2023!");// password
+        driver.findElement(By.cssSelector("#username")).sendKeys(username);// username
+        driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
         //javascript object
         JavascriptExecutor js = (JavascriptExecutor)driver;

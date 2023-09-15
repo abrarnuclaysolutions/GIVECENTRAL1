@@ -52,6 +52,9 @@ import org.testng.annotations.Test;
 public class Dynamic_Page3 extends BaseClass {
 	@Test
 	public void DynamicPage3() throws InterruptedException {
+		abcdemo ab = new abcdemo();
+		String password = ab.pass;
+		String username = ab.username;
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
          // object of javascript
@@ -61,13 +64,13 @@ public class Dynamic_Page3 extends BaseClass {
          WebDriverWait waitofusername = new WebDriverWait(driver, Duration.ofSeconds(20));
          WebElement elementofusername = waitofusername
                  .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#username")));
-         elementofusername.sendKeys("abrark_gc");
+         elementofusername.sendKeys(username);
  
          // password
          WebDriverWait waitofpass = new WebDriverWait(driver, Duration.ofSeconds(20));
          WebElement elementofpass = waitofpass
                  .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
-         elementofpass.sendKeys("loc@lbm@2023!");
+         elementofpass.sendKeys(password);
  
          // login button
          WebDriverWait waitoflogin = new WebDriverWait(driver, Duration.ofSeconds(20));

@@ -40,19 +40,23 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AddDonor extends BaseClass {
 	@Test
 	public void Add_Donor() throws InterruptedException {
+		abcdemo ab = new abcdemo();
+		String password = ab.pass;
+		String username = ab.username;
+		System.out.println(password);
         driver.get("https://www.givecentral.org/admin/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         // Login...
         WebDriverWait waitofusername = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement elementofusername = waitofusername
                         .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#username")));
-        elementofusername.sendKeys("abrark_gc");
+        elementofusername.sendKeys(username);
         // driver.findElement(By.cssSelector("#username")).sendKeys("abrark_gc");//
         // username
         WebDriverWait waitofpass = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement elementofpass = waitofpass
                         .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
-        elementofpass.sendKeys("loc@lbm@2023!");
+        elementofpass.sendKeys(password);
         // driver.findElement(By.cssSelector("#password")).sendKeys("tiger@12345678");//
         // password
         WebDriverWait waitoflogin = new WebDriverWait(driver, Duration.ofSeconds(15));
