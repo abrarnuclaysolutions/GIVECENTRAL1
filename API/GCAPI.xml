@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GCAPI">
+  <test thread-count="5" name="gcapi">
+    <classes>
+      <class name="APITESTING.API.GetDonor"/>
+      <class name="APITESTING.API.GetTicketEvent"/>
+      <class name="APITESTING.API.CrowdFunding"/>
+      <class name="APITESTING.API.GetCrowdfundingEvent"/>
+      <class name="APITESTING.API.LoginAPI"/>
+      <class name="APITESTING.API.PatchDonor"/>
+      <class name="APITESTING.API.Ticket_Event"/>
+      <class name="APITESTING.API.GetNormalEvent"/>
+      <class name="APITESTING.API.DeletePledgeEvent"/>
+      <class name="APITESTING.API.DeleteTicketEvent"/>
+      <class name="APITESTING.API.Pledge_Event"/>
+      <class name="APITESTING.API.DeleteCrowdfundingEvent"/>
+      <class name="APITESTING.API.Donor"/>
+      <class name="APITESTING.API.DeleteNormalEvent"/>
+      <class name="APITESTING.API.GetPledgeEvent"/>
+      <class name="APITESTING.API.Signup"/>
+      <class name="APITESTING.API.Locationapi"/>
+    </classes>
+  </test> <!-- gcapi -->
+</suite> <!-- GCAPI -->
