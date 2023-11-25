@@ -2,6 +2,7 @@ package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.time.Duration;
@@ -48,8 +49,9 @@ public class Dynamic_Page4 extends BaseClass {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
 		clicklogin.click();
 		//remove popup
-        Thread.sleep(4000);
-        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        Thread.sleep(5000);
+        WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
+        js.executeScript("arguments[0].scrollIntoView();", icon);
         icon.click();
 		// click on Dynamic pages
 		Thread.sleep(5000);

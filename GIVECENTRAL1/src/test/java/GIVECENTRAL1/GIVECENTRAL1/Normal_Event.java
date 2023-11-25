@@ -1,6 +1,7 @@
 package GIVECENTRAL1.GIVECENTRAL1;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.time.Duration;
@@ -39,8 +40,10 @@ public class Normal_Event extends BaseClass {
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
         clicklogin.click();
       //remove popup
-        Thread.sleep(4000);
-        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        Thread.sleep(5000);
+        WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
+        js.executeScript("arguments[0].scrollIntoView();", icon);
         icon.click();
         //click on event
         Thread.sleep(10000);
@@ -59,10 +62,7 @@ public class Normal_Event extends BaseClass {
         //event type 
         WebElement eventtype = driver.findElement(By.cssSelector("#event_type"));
         Select type = new Select(eventtype);
-        type.selectByVisibleText("Normal Events");
-        //javascript obj
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-        
+        type.selectByVisibleText("Normal Events");        
         // click on next 
         WebElement next = driver.findElement(By.cssSelector("#nexttab"));
         js.executeScript("arguments[0].scrollIntoView();", next);

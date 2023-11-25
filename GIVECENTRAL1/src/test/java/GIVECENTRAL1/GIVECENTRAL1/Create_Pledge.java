@@ -2,6 +2,7 @@ package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.ArrayList;
 
@@ -30,8 +31,10 @@ public class Create_Pledge extends BaseClass {
         driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
       //remove popup
-        Thread.sleep(4000);
-        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        Thread.sleep(5000);
+        WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
+        js.executeScript("arguments[0].scrollIntoView();", icon);
         icon.click();
         // Click on Donors
         Thread.sleep(10000);
@@ -49,9 +52,7 @@ public class Create_Pledge extends BaseClass {
         //         .click();
         // Add text on Profile ID
         driver.findElement(By.cssSelector("#userid")).sendKeys("kaif12345");
-        // javaScript object
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        // Scroll page and Click on Search Donor.
+                // Scroll page and Click on Search Donor.
         WebElement searchdonor = driver.findElement(By.cssSelector("#SubmitBtn"));
         js.executeScript("arguments[0].scrollIntoView();", searchdonor);
         searchdonor.click();

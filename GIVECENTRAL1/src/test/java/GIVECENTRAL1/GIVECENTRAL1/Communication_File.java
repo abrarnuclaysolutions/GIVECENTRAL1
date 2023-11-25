@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
@@ -72,9 +73,10 @@ public class Communication_File extends BaseClass {
         WebDriverWait waitoflogin = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement clicklogin = waitoflogin.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
         clicklogin.click();
-       //remove popup
-        Thread.sleep(4000);
-        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+      //remove popup
+        Thread.sleep(5000);
+        WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
+        js.executeScript("arguments[0].scrollIntoView();", icon);
         icon.click();
         //click on communication
         Thread.sleep(7000);
@@ -140,8 +142,9 @@ public class Communication_File extends BaseClass {
         Actions act = new Actions(driver);
         act.dragAndDrop(dragelement, dropelement).click().perform();
         //select the image
+        Thread.sleep(3000);
         WebElement upload = driver.findElement(By.xpath("//input[@class='fileupload nofile']"));
-        upload.sendKeys("/Users/harendersingh/Desktop/eclipseimg.png");
+        upload.sendKeys("/Users/harendersingh/Desktop/don'tdelete.png");
 //        Actions image = new Actions(driver);
 //        image.sendKeys("C:\\Users\\Cw\\Pictures\\Screenshots\\Screenshot (3).png");
         //click on save

@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -70,8 +71,10 @@ public class Crowdfounding_Event extends BaseClass {
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
         clicklogin.click();
       //remove popup
-        Thread.sleep(4000);
-        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        Thread.sleep(5000);
+        WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
+        js.executeScript("arguments[0].scrollIntoView();", icon);
         icon.click();
         //click on event
         Thread.sleep(10000);
@@ -94,8 +97,6 @@ public class Crowdfounding_Event extends BaseClass {
         //goal ammount
         WebElement goalammount = driver.findElement(By.cssSelector("#target_amount"));
         goalammount.sendKeys("100");
-        //javascript obj
-        JavascriptExecutor js = (JavascriptExecutor)driver;
         // click on next 
         WebElement next = driver.findElement(By.cssSelector("#nexttab"));
         js.executeScript("arguments[0].scrollIntoView();", next);

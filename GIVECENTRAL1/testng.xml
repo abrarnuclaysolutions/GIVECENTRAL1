@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="GIVECENTRAL">
-	<listeners>
-		<listener class-name="com.utility.Listenerclass"></listener>
-	</listeners>
-  <test thread-count="5" name="GIVECENTRAL">
+<suite name="Givecentral">
+  <test thread-count="5" name="GC">
     <classes>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Crowdfounding_Event"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.GiveCentral_First"/>
@@ -23,5 +20,5 @@
       <class name="GIVECENTRAL1.GIVECENTRAL1.Create_Pledge"/>
       <class name="GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction"/>
     </classes>
-  </test> <!-- GIVECENTRAL -->
-</suite> <!-- GIVECENTRAL -->
+  </test> <!-- GC -->
+</suite> <!-- Givecentral -->

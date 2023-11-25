@@ -2,6 +2,7 @@ package GIVECENTRAL1.GIVECENTRAL1;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -33,8 +34,9 @@ public class Express_Setup_Manage_Auction extends BaseClass {
 		driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
 		driver.findElement(By.cssSelector("#logCnf")).click();// login button
 		//remove popup
-        Thread.sleep(4000);
-        WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
+        Thread.sleep(5000);
+        WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
+        js.executeScript("arguments[0].scrollIntoView();", icon);
         icon.click();
 //		Click on Express Setup
 		Thread.sleep(7000);

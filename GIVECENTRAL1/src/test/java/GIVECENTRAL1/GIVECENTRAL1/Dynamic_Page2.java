@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -78,10 +79,10 @@ public class Dynamic_Page2 extends BaseClass {
                  .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
          clicklogin.click();
        //remove popup
-         Thread.sleep(4000);
-         WebElement icon = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='adminPageModal']/div[1]/div[1]/div[1]/button[1]/span[1]/img[1]"));
-         icon.click();
-         //click on Dynamic pages
+         Thread.sleep(5000);
+         WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
+         js.executeScript("arguments[0].scrollIntoView();", icon);
+         icon.click();         //click on Dynamic pages
          Thread.sleep(10000);
          WebDriverWait dynamicwait = new WebDriverWait(driver,Duration.ofSeconds(20));
          WebElement clickdynamic = dynamicwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Dynamic Pages']")));

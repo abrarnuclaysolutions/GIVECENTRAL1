@@ -76,7 +76,7 @@ public class BaseClass extends ExtentReport {
 	}
 	@AfterMethod
 	public void cb() {
-		driver.close();
+//		driver.close();
 //		driver1.close();
 	}
 }

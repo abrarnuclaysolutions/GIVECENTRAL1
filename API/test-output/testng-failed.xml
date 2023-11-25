@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [GcApi]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="GCAPI(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APITESTING.API.Get_API">
+      <class name="APITESTING.API.AuthorizeUserProfile">
         <methods>
-          <include name="Get_api"/>
+          <include name="getauthorizeuserprofile"/>
+          <include name="oauth"/>
         </methods>
-      </class> <!-- APITESTING.API.Get_API -->
+      </class> <!-- APITESTING.API.AuthorizeUserProfile -->
     </classes>
-  </test> <!-- GCAPI(failed) -->
-</suite> <!-- Failed suite [GcApi] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

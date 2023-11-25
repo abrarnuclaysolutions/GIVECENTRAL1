@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APITESTING.API.GetDonor">
+      <class name="APITESTING.API.AuthorizeUserProfile">
         <methods>
-          <include name="get_Donor"/>
+          <include name="getauthorizeuserprofile"/>
+          <include name="oauth"/>
         </methods>
-      </class> <!-- APITESTING.API.GetDonor -->
+      </class> <!-- APITESTING.API.AuthorizeUserProfile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
