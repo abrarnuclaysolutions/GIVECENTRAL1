@@ -147,6 +147,7 @@ public class LoginAPI {
 	@Test(dependsOnMethods = "Donor")
 	public void paymentmethod() {
 		System.out.println("==================payment-method====================");
+		System.out.println(gcid);
 		RequestSpecification req = RestAssured.given();
 		req.baseUri("https://gcapit.myworkforce.org");
 		req.basePath("/paymentMethods");

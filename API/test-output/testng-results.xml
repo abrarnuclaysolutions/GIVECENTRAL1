@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-18T02:50:07 IST" name="Default suite" finished-at="2023-09-18T02:50:13 IST" duration-ms="6494">
+  <suite started-at="2023-12-30T21:35:23 IST" name="Default suite" finished-at="2023-12-30T21:35:40 IST" duration-ms="16990">
     <groups>
     </groups>
-    <test started-at="2023-09-18T02:50:07 IST" name="Default test" finished-at="2023-09-18T02:50:13 IST" duration-ms="6494">
-      <class name="APITESTING.API.Receipt">
-        <test-method signature="receipt()[pri:0, instance:APITESTING.API.Receipt@130161f7]" started-at="2023-09-18T02:50:07 IST" name="receipt" finished-at="2023-09-18T02:50:13 IST" duration-ms="6418" status="PASS">
+    <test started-at="2023-12-30T21:35:23 IST" name="Default test" finished-at="2023-12-30T21:35:40 IST" duration-ms="16990">
+      <class name="APITESTING.API.LoginAPI">
+        <test-method signature="oauth()[pri:0, instance:APITESTING.API.LoginAPI@243c4f91]" started-at="2023-12-30T21:35:23 IST" name="oauth" finished-at="2023-12-30T21:35:29 IST" duration-ms="5600" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- receipt -->
-      </class> <!-- APITESTING.API.Receipt -->
+        </test-method> <!-- oauth -->
+        <test-method signature="event()[pri:0, instance:APITESTING.API.LoginAPI@243c4f91]" started-at="2023-12-30T21:35:29 IST" name="event" finished-at="2023-12-30T21:35:31 IST" depends-on-methods="APITESTING.API.LoginAPI.oauth" duration-ms="2510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- event -->
+        <test-method signature="Donor()[pri:0, instance:APITESTING.API.LoginAPI@243c4f91]" started-at="2023-12-30T21:35:31 IST" name="Donor" finished-at="2023-12-30T21:35:34 IST" depends-on-methods="APITESTING.API.LoginAPI.event" duration-ms="2213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Donor -->
+        <test-method signature="paymentmethod()[pri:0, instance:APITESTING.API.LoginAPI@243c4f91]" started-at="2023-12-30T21:35:34 IST" name="paymentmethod" finished-at="2023-12-30T21:35:36 IST" depends-on-methods="APITESTING.API.LoginAPI.Donor" duration-ms="2069" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paymentmethod -->
+        <test-method signature="giftbox()[pri:0, instance:APITESTING.API.LoginAPI@243c4f91]" started-at="2023-12-30T21:35:36 IST" name="giftbox" finished-at="2023-12-30T21:35:38 IST" depends-on-methods="APITESTING.API.LoginAPI.paymentmethod" duration-ms="2312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- giftbox -->
+        <test-method signature="signup()[pri:0, instance:APITESTING.API.LoginAPI@243c4f91]" started-at="2023-12-30T21:35:38 IST" name="signup" finished-at="2023-12-30T21:35:40 IST" depends-on-methods="APITESTING.API.LoginAPI.giftbox" duration-ms="2123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signup -->
+      </class> <!-- APITESTING.API.LoginAPI -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

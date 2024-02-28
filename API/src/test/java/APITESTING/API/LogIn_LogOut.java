@@ -42,6 +42,7 @@ public class LogIn_LogOut {
 	}
 	@Test(dependsOnMethods = "login")
 	public void logout() {
+		System.out.println("===================================logout========================");
 		RequestSpecification req = RestAssured.given();
 		req.baseUri("https://gcapit.myworkforce.org");
 		req.basePath("/logout");

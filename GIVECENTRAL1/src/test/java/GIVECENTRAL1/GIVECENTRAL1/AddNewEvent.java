@@ -60,19 +60,23 @@ public class AddNewEvent extends BaseClass {
         driver.findElement(By.cssSelector("#username")).sendKeys(username);// username
         driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
+
+        //Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
         //URL of profile
         driver.get("https://www.givecentral.org/admin/donor-details/profile/kaif12345");
         JavascriptExecutor js = (JavascriptExecutor)driver;
         //Click on add new event
         Thread.sleep(7000);
-        WebElement addnewevent = driver.findElement(By.cssSelector("body > div:nth-child(3) > div:nth-child(9) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(2) > button:nth-child(1)"));
+        WebElement addnewevent = driver.findElement(By.xpath("//button[contains(text(),'Add new Event')]"));
         js.executeScript("arguments[0].scrollIntoView();", addnewevent);
         addnewevent.click();
         //Select an event
         WebElement selectevent = driver.findElement(By.cssSelector("#event"));
         selectevent.click();
         Select dropSelect = new Select(selectevent);
-        dropSelect.selectByVisibleText("20-March");
+        dropSelect.selectByVisibleText("testevnt17Jan2024");
         //add Frequency
         WebDriverWait waitoffrequency = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement addfrequency = waitoffrequency.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#paymentFrequency")));
@@ -91,7 +95,7 @@ public class AddNewEvent extends BaseClass {
         //Add payment method
         WebElement clickpaymethod = driver.findElement(By.cssSelector("#paymentMethod"));
         Select addpaymethod = new Select(clickpaymethod);
-        addpaymethod.selectByVisibleText("Visa - xxx4242 added on 2023-03-02 expiring on 2033-09-30");
+        addpaymethod.selectByVisibleText("Visa - xxx4242 added on 2024-02-28 expiring on 2032-02-29");
         //add source code
         WebElement sourcecode = driver.findElement(By.cssSelector(".caret"));
         js.executeScript("arguments[0].scrollIntoView();", sourcecode);

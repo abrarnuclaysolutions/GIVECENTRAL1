@@ -64,6 +64,10 @@ public class AddDonor extends BaseClass {
         WebElement clicklogin = waitoflogin
                         .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
         clicklogin.click();
+        
+        //Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
         //remove popup
         JavascriptExecutor js = (JavascriptExecutor)driver;
         Thread.sleep(5000);
@@ -121,7 +125,7 @@ public class AddDonor extends BaseClass {
         //enter parish id 
         WebElement parishid = driver.findElement(By.xpath("//select[@name='parishid']"));
         Select pid = new Select(parishid);
-        pid.selectByVisibleText("106 - Immaculate Conception Parish - 9");
+        pid.selectByVisibleText("106 - Basilica of Bom Jesus - city2");
         // submit
         WebElement submit = driver.findElement(By.cssSelector("input[value='Save Donor']"));
         js.executeScript("arguments[0].scrollIntoView();", submit);

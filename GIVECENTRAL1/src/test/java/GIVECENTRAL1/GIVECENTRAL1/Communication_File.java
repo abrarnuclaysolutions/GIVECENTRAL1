@@ -73,6 +73,10 @@ public class Communication_File extends BaseClass {
         WebDriverWait waitoflogin = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement clicklogin = waitoflogin.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
         clicklogin.click();
+        
+        //Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
       //remove popup
         Thread.sleep(5000);
         WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
@@ -96,7 +100,7 @@ public class Communication_File extends BaseClass {
         driver.switchTo().window(newtab.get(1));
         //click on send email
         Thread.sleep(4000);
-        WebElement sendemail = driver.findElement(By.xpath("//a[normalize-space()='Send Emails']"));
+        WebElement sendemail = driver.findElement(By.cssSelector("div.body_wrapper:nth-child(1) aside:nth-child(5) ul.side-menu-list:nth-child(2) li.sidebar-items-all:nth-child(3) > a.sidebar-item-parent"));
         sendemail.click();
         //click on new campaign
         driver.findElement(By.xpath("//h5[normalize-space()='New Campaign']")).click();
@@ -144,7 +148,7 @@ public class Communication_File extends BaseClass {
         //select the image
         Thread.sleep(3000);
         WebElement upload = driver.findElement(By.xpath("//input[@class='fileupload nofile']"));
-        upload.sendKeys("/Users/harendersingh/Desktop/don'tdelete.png");
+        upload.sendKeys("/Users/harendersingh/Desktop/screenshotGC/Screenshot 2023-07-29 at 1.30.12 AM.png");
 //        Actions image = new Actions(driver);
 //        image.sendKeys("C:\\Users\\Cw\\Pictures\\Screenshots\\Screenshot (3).png");
         //click on save

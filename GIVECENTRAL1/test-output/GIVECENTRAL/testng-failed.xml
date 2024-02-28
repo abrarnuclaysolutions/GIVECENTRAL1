@@ -1,11 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [GIVECENTRAL]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.utility.Listenerclass"/>
-  </listeners>
-  <test thread-count="5" name="GIVECENTRAL(failed)">
+<suite name="Failed suite [Givecentral]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="GC(failed)">
     <classes>
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Normal_Event">
+        <methods>
+          <include name="Setup"/>
+          <include name="NormalEvent"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Normal_Event -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Crowdfounding_Event">
+        <methods>
+          <include name="Setup"/>
+          <include name="CrowdfoundingEvent"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Crowdfounding_Event -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page4">
+        <methods>
+          <include name="Setup"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="DynamicPage4"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page4 -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Text_To_Engage_Report">
+        <methods>
+          <include name="Setup"/>
+          <include name="TextToEngageReport"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Text_To_Engage_Report -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.AddNewEvent">
+        <methods>
+          <include name="Setup"/>
+          <include name="Add_New_Event"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.AddNewEvent -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.GiveCentral_First">
+        <methods>
+          <include name="Setup"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="GC_First"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.GiveCentral_First -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction">
+        <methods>
+          <include name="Setup"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="Manage_Auction"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Express_Setup_Manage_Auction -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page3">
+        <methods>
+          <include name="Setup"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="DynamicPage3"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Dynamic_Page3 -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Communication_File">
+        <methods>
+          <include name="Setup"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="Comm_file"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Communication_File -->
+      <class name="GIVECENTRAL1.GIVECENTRAL1.Make_Guest_Payment">
+        <methods>
+          <include name="Setup"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="MakeGuestPayment"/>
+          <include name="cb"/>
+        </methods>
+      </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Make_Guest_Payment -->
       <class name="GIVECENTRAL1.GIVECENTRAL1.Create_Pledge">
         <methods>
           <include name="Setup"/>
@@ -16,5 +103,5 @@
         </methods>
       </class> <!-- GIVECENTRAL1.GIVECENTRAL1.Create_Pledge -->
     </classes>
-  </test> <!-- GIVECENTRAL(failed) -->
-</suite> <!-- Failed suite [GIVECENTRAL] -->
+  </test> <!-- GC(failed) -->
+</suite> <!-- Failed suite [Givecentral] -->

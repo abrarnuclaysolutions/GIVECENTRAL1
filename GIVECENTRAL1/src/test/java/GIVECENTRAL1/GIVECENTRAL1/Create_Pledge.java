@@ -30,6 +30,10 @@ public class Create_Pledge extends BaseClass {
         driver.findElement(By.cssSelector("#username")).sendKeys(username);// username
         driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
+        
+        //Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
       //remove popup
         JavascriptExecutor js = (JavascriptExecutor)driver;
         Thread.sleep(5000);
@@ -67,13 +71,13 @@ public class Create_Pledge extends BaseClass {
         ArrayList<String> newtab = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(newtab.get(1));
         //Scroll and Click on Create pledge.
-        WebElement pledgeelement = driver.findElement(By.cssSelector("body > div:nth-child(3) > div:nth-child(9) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(2) > button:nth-child(1)"));
+        WebElement pledgeelement = driver.findElement(By.xpath("//button[contains(text(),'Create Pledge')]"));
         js.executeScript("arguments[0].scrollIntoView();", pledgeelement);
         pledgeelement.click();
         //Select Event By DropDown.
         WebElement eventelement = driver.findElement(By.cssSelector("#event"));
         Select Dropdownselect = new Select(eventelement);
-        Dropdownselect.selectByVisibleText("Pledge Demo");
+        Dropdownselect.selectByVisibleText("pldggee");
         //Fill ammount.
         driver.findElement(By.cssSelector("#pledgeAmount")).sendKeys("0.05");
         //Add Frequency.
@@ -94,10 +98,27 @@ public class Create_Pledge extends BaseClass {
         js.executeScript("arguments[0].scrollIntoView();", objofamount);
         objofamount.sendKeys("0.05");
         
-        //enter source code
-        driver.findElement(By.cssSelector(".caret")).click();
-        driver.findElement(By.cssSelector("body > div:nth-child(3) > div:nth-child(9) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > form:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > strong:nth-child(2) > strong:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)")).click();
-
+      //add source code
+        WebElement sourcecode = driver.findElement(By.cssSelector(".caret"));
+        js.executeScript("arguments[0].scrollIntoView();", sourcecode);
+        sourcecode.click();
+        WebElement clickonsourcecode = driver.findElement(By.xpath("//a[normalize-space()='110011']"));
+        js.executeScript("arguments[0].scrollIntoView();", clickonsourcecode);
+        clickonsourcecode.click();
+        
+        //add parish id
+        WebElement pid = driver.findElement(By.xpath("//select[@id='parish_id']"));
+        Select spid = new Select(pid);
+        spid.selectByVisibleText("10 - Cathedral Santuario de Guadalupe");
+        
+        //add designation
+        WebElement adddesignation = driver.findElement(By.xpath("//select[@id='selDesignation']"));
+        Select valueofadddesignation = new Select(adddesignation);
+        valueofadddesignation.selectByVisibleText("In memory of");
+        
+        // Click on add
+        driver.findElement(By.xpath("//button[@id='AddDesignation']")).click();
+        
         //Click on Continue button.
         WebElement continuebutton = driver.findElement(By.cssSelector("#pledgeSubmit"));
         js.executeScript("arguments[0].scrollIntoView();", continuebutton);
@@ -105,7 +126,7 @@ public class Create_Pledge extends BaseClass {
         //SELECT payment methods
         WebElement payelement = driver.findElement(By.cssSelector("#paymentMethod"));
         Select paymethods = new Select(payelement);
-        paymethods.selectByVisibleText("Visa - xxx4242 added on 03/02/2023 expiring on 2033-09-30");
+        paymethods.selectByVisibleText("Visa - xxx4242 added on 02/28/2024 expiring on 2032-02-29");
         // click on continue
         WebElement paycontinuebutton = driver.findElement(By.cssSelector("#continueBtn"));
         paycontinuebutton.click();

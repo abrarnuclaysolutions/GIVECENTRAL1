@@ -3,12 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APITESTING.API.AuthorizeUserProfile">
+      <class name="APITESTING.API.Ticket_Event">
         <methods>
-          <include name="getauthorizeuserprofile"/>
+          <include name="giftbox"/>
+          <include name="donor"/>
+          <include name="event"/>
+          <include name="signup"/>
           <include name="oauth"/>
+          <include name="paymentmethod"/>
         </methods>
-      </class> <!-- APITESTING.API.AuthorizeUserProfile -->
+      </class> <!-- APITESTING.API.Ticket_Event -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
