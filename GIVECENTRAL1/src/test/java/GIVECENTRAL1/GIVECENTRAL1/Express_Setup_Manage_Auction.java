@@ -33,6 +33,11 @@ public class Express_Setup_Manage_Auction extends BaseClass {
 		driver.findElement(By.cssSelector("#username")).sendKeys(username);// username
 		driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
 		driver.findElement(By.cssSelector("#logCnf")).click();// login button
+		
+		//Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
+       
 		//remove popup
         Thread.sleep(5000);
         WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));

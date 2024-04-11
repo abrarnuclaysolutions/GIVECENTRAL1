@@ -123,9 +123,9 @@ public class AddDonor extends BaseClass {
         js.executeScript("arguments[0].scrollIntoView();", zip);
         zip.sendKeys("12121");
         //enter parish id 
-        WebElement parishid = driver.findElement(By.xpath("//select[@name='parishid']"));
-        Select pid = new Select(parishid);
-        pid.selectByVisibleText("106 - Basilica of Bom Jesus - city2");
+//        WebElement parishid = driver.findElement(By.xpath("//select[@name='parishid']"));
+//        Select pid = new Select(parishid);
+//        pid.selectByVisibleText("106 - Basilica of Bom Jesus - city2");
         // submit
         WebElement submit = driver.findElement(By.cssSelector("input[value='Save Donor']"));
         js.executeScript("arguments[0].scrollIntoView();", submit);

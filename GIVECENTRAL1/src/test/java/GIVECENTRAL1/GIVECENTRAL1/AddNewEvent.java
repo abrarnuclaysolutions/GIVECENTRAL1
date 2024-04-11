@@ -97,12 +97,12 @@ public class AddNewEvent extends BaseClass {
         Select addpaymethod = new Select(clickpaymethod);
         addpaymethod.selectByVisibleText("Visa - xxx4242 added on 2024-02-28 expiring on 2032-02-29");
         //add source code
-        WebElement sourcecode = driver.findElement(By.cssSelector(".caret"));
-        js.executeScript("arguments[0].scrollIntoView();", sourcecode);
-        sourcecode.click();
-        WebElement clickonsourcecode = driver.findElement(By.xpath("//a[normalize-space()='110022 -']"));
-        js.executeScript("arguments[0].scrollIntoView();", clickonsourcecode);
-        clickonsourcecode.click();
+//        WebElement sourcecode = driver.findElement(By.cssSelector(".caret"));
+//        js.executeScript("arguments[0].scrollIntoView();", sourcecode);
+//        sourcecode.click();
+//        WebElement clickonsourcecode = driver.findElement(By.xpath("//a[normalize-space()='110022 -']"));
+//        js.executeScript("arguments[0].scrollIntoView();", clickonsourcecode);
+//        clickonsourcecode.click();
         //click on submit
         WebElement submitelement = driver.findElement(By.xpath("//input[@id='submit']"));
         js.executeScript("arguments[0].scrollIntoView();", submitelement);

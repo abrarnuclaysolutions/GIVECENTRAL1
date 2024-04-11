@@ -25,7 +25,7 @@ public class GiveCentral_First extends BaseClass {
       
         //Select Event
         Thread.sleep(5000);
-        driver.findElement(By.cssSelector("img[title='new image event']")).click();
+        driver.findElement(By.cssSelector("div.container.section-common-space:nth-child(8) div.row div.col-lg-9.col-md-7.col-sm-12 div.featured_events:nth-child(4) div.grid-box.locationEvents.dashboard-events div.grid-item.event_div:nth-child(3) div.thumbnail a:nth-child(1) div.caption > h6:nth-child(1)")).click();
         //Add amount
         driver.findElement(By.cssSelector("#amount")).sendKeys("0.01");
         // Frequency 
@@ -33,65 +33,17 @@ public class GiveCentral_First extends BaseClass {
         Select dropdown = new Select(element);
         dropdown.selectByVisibleText("Monthly");
         // Submit Value
-        driver.findElement(By.cssSelector("#submitBtn")).click();     
+        driver.findElement(By.xpath("//button[@id='submitBtn']")).click();     
         
         // Checkout button with Wait
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000));
         WebElement element2 =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#checkoutBtn")));
         element2.click();
-        Thread.sleep(5000);
-        driver.findElement(By.cssSelector(".btn.btn-primary.float-right.btn-sm.btn-mob")).click();
-//        //click on sign up
-//        WebElement signup = driver.findElement(By.xpath("//a[contains(text(),'Complete Profile')]"));
-//        signup.click();
-//        //fill form
-//        //fname
-//        Thread.sleep(2000);
-//        WebElement fname = driver.findElement(By.xpath("//input[@id='ufname']"));
-//        js.executeScript("arguments[0].scrollIntoView();", fname);
-//        fname.sendKeys("kaif");
-//        //lname
-//        driver.findElement(By.xpath("//input[@id='ulname']")).sendKeys("aslam");
-//        //user name
-//        driver.findElement(By.xpath("//input[@id='uid']")).sendKeys("kaifaslam");
-//        //email
-//        driver.findElement(By.xpath("//input[@id='uemail']")).sendKeys("kaifaslam@gmail.com");
-//        //pass1
-//        driver.findElement(By.xpath("//input[@id='upassword']")).sendKeys("kaifaslam12345");
-//        //Cpass2
-//        driver.findElement(By.xpath("//input[@id='conf_upassword']")).sendKeys("kaifaslam12345");
-//        //address
-//        driver.findElement(By.xpath("//input[@id='daddress1']")).sendKeys("sansarpur");
-//        //city
-//        driver.findElement(By.xpath("//input[@id='ddonor_city']")).sendKeys("saharanpur");
-//        //state
-//        WebElement state = driver.findElement(By.xpath("//select[@name='ddonor_state']"));
-//        Select st = new Select(state);
-//        st.selectByVisibleText("California ");
-//        //enter zip
-//        driver.findElement(By.xpath("//input[@id='dzip']")).sendKeys("12121");
-//        //card number 
-//        WebElement cn = driver.findElement(By.xpath("//input[@id='cardNo']"));
-//        js.executeScript("arguments[0].scrollIntoView();", cn);
-//        cn.sendKeys("4242424242424242");
-//        //month
-//        WebElement month = driver.findElement(By.xpath("//select[@id='sel_month']"));
-//        Select mon = new Select(month);
-//        mon.selectByVisibleText("02");
-//        //year
-//        WebElement year = driver.findElement(By.xpath("//select[@id='sel_year']"));
-//        Select ye = new Select(year);
-//        ye.selectByVisibleText("2025");
-//        //enter cvv
-//        driver.findElement(By.xpath("//input[@id='cvvNo']")).sendKeys("121");
-//        //zip again
-//        driver.findElement(By.xpath("//input[@id='uzip']")).sendKeys("12121");
-//        //click on check box
-//        driver.findElement(By.xpath("//label[@class='field option block']//span[@class='checkbox']")).click();
-//        driver.findElement(By.xpath("//div[@class='recaptcha-checkbox-border']")).click();
-//        //submit form
-//        driver.findElement(By.xpath("//button[@id='register']")).submit();
         
+        Thread.sleep(4000);
+        WebElement cont = driver.findElement(By.xpath("//a[@href='https://www.givecentral.org/login' and @class='btn btn-primary float-right btn-sm btn-mob']"));
+        js.executeScript("arguments[0].scrollIntoView();", cont);
+        cont.click();
         //Login 
         driver.findElement(By.cssSelector("#username")).sendKeys("kaif12345");
         driver.findElement(By.cssSelector("#password")).sendKeys("kaif12345");
@@ -99,9 +51,6 @@ public class GiveCentral_First extends BaseClass {
         
         //submit after login
         driver.findElement(By.cssSelector("#submit_gift")).click(); 
-//        close driver
-//        Thread.sleep(10000);
-//        driver.close();
 	}
 //	@AfterMethod
 //	public void cb() {

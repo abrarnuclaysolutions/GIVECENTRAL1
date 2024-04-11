@@ -100,7 +100,7 @@ public class Communication_File extends BaseClass {
         driver.switchTo().window(newtab.get(1));
         //click on send email
         Thread.sleep(4000);
-        WebElement sendemail = driver.findElement(By.cssSelector("div.body_wrapper:nth-child(1) aside:nth-child(5) ul.side-menu-list:nth-child(2) li.sidebar-items-all:nth-child(3) > a.sidebar-item-parent"));
+        WebElement sendemail = driver.findElement(By.xpath("//body/div[1]/aside[1]/ul[1]/li[3]/a[1]"));
         sendemail.click();
         //click on new campaign
         driver.findElement(By.xpath("//h5[normalize-space()='New Campaign']")).click();
@@ -115,7 +115,7 @@ public class Communication_File extends BaseClass {
         emaileElement.sendKeys(Keys.ENTER);
         // check on id
         Thread.sleep(5000);
-        WebElement id = driver.findElement(By.xpath("//td[normalize-space()='fdg']//span[@class='checkmark']"));
+        WebElement id = driver.findElement(By.xpath("//body[1]/div[1]/main[1]/div[3]/form[1]/div[1]/div[1]/div[3]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/label[1]/span[1]"));
         id.click();
         //click on continue
         WebElement contiElement = driver.findElement(By.xpath("//button[@id='continue-btn']"));

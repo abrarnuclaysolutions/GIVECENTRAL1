@@ -39,6 +39,11 @@ public class Normal_Event extends BaseClass {
         WebElement clicklogin = waitoflogin
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
         clicklogin.click();
+        
+      //Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
+       
       //remove popup
         JavascriptExecutor js = (JavascriptExecutor)driver;
         Thread.sleep(5000);
@@ -95,7 +100,7 @@ public class Normal_Event extends BaseClass {
         WebElement next5 = driver.findElement(By.cssSelector("#nexttab5"));
         next5.click();
         //next6
-        WebElement next6 = driver.findElement(By.cssSelector("#nexttab6"));
+        WebElement next6 = driver.findElement(By.cssSelector("#nexttab7"));
         next6.click();
         //next7
         WebElement next7 = driver.findElement(By.cssSelector("#nexttab7"));

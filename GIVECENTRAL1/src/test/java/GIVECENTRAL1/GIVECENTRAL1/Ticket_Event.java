@@ -70,6 +70,11 @@ public class Ticket_Event extends BaseClass {
 		WebElement clicklogin = waitoflogin
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
 		clicklogin.click();
+		
+		//Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
+       
 		//remove popup
         JavascriptExecutor js = (JavascriptExecutor)driver;
         Thread.sleep(5000);
@@ -125,8 +130,13 @@ public class Ticket_Event extends BaseClass {
 		// click on next
 		WebElement next4 = driver.findElement(By.cssSelector("#nexttab4"));
 		next4.click();
-		// click on next
-		WebElement next6 = driver.findElement(By.cssSelector("#nexttab6"));
+		
+//		//select event parish category
+//		WebElement epc = driver.findElement(By.xpath("//select[@name='eventParishCategory[]']"));
+//		Select sepc = new Select(epc);
+//		sepc.selectByVisibleText("default");
+//		// click on next
+		WebElement next6 = driver.findElement(By.cssSelector("#nexttab7"));
 		next6.click();
 		// click on next
 		WebElement next7 = driver.findElement(By.cssSelector("#nexttab7"));

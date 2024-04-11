@@ -78,6 +78,11 @@ public class Dynamic_Page3 extends BaseClass {
          WebElement clicklogin = waitoflogin
                  .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
          clicklogin.click();
+         
+       //Click on got it
+         Thread.sleep(2000);
+         driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
+        
        //remove popup
          Thread.sleep(5000);
          WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
@@ -123,7 +128,7 @@ public class Dynamic_Page3 extends BaseClass {
         
         WebElement sel = driver.findElement(By.xpath("//select[@id='one_time_event']"));
         Select drop = new Select(sel);
-        drop.selectByVisibleText("20-March");
+        drop.selectByVisibleText("21aug");
         //click on check2
         WebElement checkElement2 = driver.findElement(By.xpath("//input[@id='payment_option_recurring']"));
         js.executeScript("arguments[0].scrollIntoView();", checkElement2);
@@ -131,7 +136,7 @@ public class Dynamic_Page3 extends BaseClass {
         //select one event2
         WebElement selecElement = driver.findElement(By.xpath("//select[@id='recurring_event']"));
         Select drop2Select = new Select(selecElement);
-        drop2Select.selectByVisibleText("19febtest");
+        drop2Select.selectByVisibleText("22oct30");
         // Title
         WebElement tiElement = driver.findElement(By.cssSelector("input[name='form_title']"));
         js.executeScript("arguments[0].scrollIntoView();", tiElement);
@@ -156,11 +161,11 @@ public class Dynamic_Page3 extends BaseClass {
         submit.click();
         //click on close
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//body/div[@id='systemMessagesDiv']/div[1]/div[1]/div[1]/button[1]")).click();
+        driver.findElement(By.xpath("//button[@class='close' and @type='button' and @data-dismiss='modal']")).click();
         //copy URL
         driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[1]/a[1]")).click();
         //close driver
-        Thread.sleep(5000);
+        Thread.sleep(4000);
 //        driver.close();
         //open url
 //        op.addArguments("--remote-allow-origins=*");
@@ -200,10 +205,10 @@ public class Dynamic_Page3 extends BaseClass {
         Select cf = new Select(af);
         cf.selectByVisibleText("One-Time");
         //add parish
-        WebElement parish = driver1.findElement(By.xpath("//select[@name='selectMultipleParishRecurr']"));
-        js1.executeScript("arguments[0].scrollIntoView();", parish);
-        Select par = new Select(parish);
-        par.selectByVisibleText("Immaculate Conception Parish - 9 (106)");
+//        WebElement parish = driver1.findElement(By.xpath("//select[@name='selectMultipleParishRecurr']"));
+//        js1.executeScript("arguments[0].scrollIntoView();", parish);
+//        Select par = new Select(parish);
+//        par.selectByVisibleText("Basilica of Bom Jesus - city2 (106)");
         //name on card
         driver1.findElement(By.xpath("//input[@name='cc_name_on_card']")).sendKeys("Abrar");
         //card number

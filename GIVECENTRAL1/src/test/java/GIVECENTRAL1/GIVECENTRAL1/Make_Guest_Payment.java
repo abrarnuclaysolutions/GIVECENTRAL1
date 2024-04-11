@@ -55,6 +55,11 @@ public class Make_Guest_Payment extends BaseClass {
         driver.findElement(By.cssSelector("#username")).sendKeys(username);// username
         driver.findElement(By.cssSelector("#password")).sendKeys(password);// password
         driver.findElement(By.cssSelector("#logCnf")).click();// login button
+        
+      //Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
+       
         //javascript object
         JavascriptExecutor js = (JavascriptExecutor)driver;
       //remove popup
@@ -74,11 +79,11 @@ public class Make_Guest_Payment extends BaseClass {
         WebElement clickguest = guestpay.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("//span[normalize-space()='Make Guest Payment']")));
         clickguest.click();
         //check on click event
-        WebElement check = driver.findElement(By.cssSelector("input[value='36715']"));
+        WebElement check = driver.findElement(By.cssSelector("#event_id"));
         js.executeScript("arguments[0].scrollIntoView();", check);
         check.click();
         //add amount 
-        WebElement eventpay = driver.findElement(By.cssSelector("input[name='amount[]'][type='text'][onfocus='gcheck(36715)']"));
+        WebElement eventpay = driver.findElement(By.cssSelector("#amount_40074"));
         eventpay.sendKeys("0.05");
         //scroll and click on continue
         WebDriverWait continuewait = new WebDriverWait(driver,Duration.ofSeconds(10));
@@ -128,7 +133,7 @@ public class Make_Guest_Payment extends BaseClass {
         //select year
         WebElement year = driver.findElement(By.cssSelector("#sel_year"));
         Select selectyear = new Select(year);
-        selectyear.selectByVisibleText("2023");
+        selectyear.selectByVisibleText("2024");
        
         //Enter cvv 
         WebElement cvv = driver.findElement(By.cssSelector("#cc_cvv"));

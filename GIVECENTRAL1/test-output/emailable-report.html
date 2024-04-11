@@ -9,19 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">137,459</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">37,456</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">GIVECENTRAL1.GIVECENTRAL1.Create_Pledge</td><td><a href="#m0">CreatePladge</a></td><td rowspan="1">1709146739891</td><td rowspan="1">133488</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">GIVECENTRAL1.GIVECENTRAL1.GiveCentral_First</td><td><a href="#m0">GC_First</a></td><td rowspan="1">1712090766773</td><td rowspan="1">31643</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">GIVECENTRAL1.GIVECENTRAL1.Create_Pledge#CreatePladge</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;error twelve columns&apos;]&quot;}
+<h2>Default test</h2><h3 id="m0">GIVECENTRAL1.GIVECENTRAL1.GiveCentral_First#GC_First</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;btn btn-primary float-right btn-sm btn-mob&quot; href=&quot;https://www.givecentral.org/login&quot;&gt;...&lt;/a&gt; is not clickable at point (844, 23). Other element would receive the click: &lt;ul class=&quot;nav justify-content-end&quot;&gt;...&lt;/ul&gt;
   (Session info: chrome=111.0.5563.64)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;19.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc74017d74c5acf1125528f77fffb7ec, findElement {using=xpath, value=//ul[@class=&apos;error twelve columns&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/02/fx5lb6p175s...}, goog:chromeOptions: {debuggerAddress: localhost:56184}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56184/devtoo..., se:cdpVersion: 111.0.5563.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dc74017d74c5acf1125528f77fffb7ec
+Command: [977fecc9eed3ba2e2b979c916a4f15cb, clickElement {id=c069cd69-0181-4fef-8c59-7d29e16e9b27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/02/fx5lb6p175s...}, goog:chromeOptions: {debuggerAddress: localhost:58323}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:58323/devtoo..., se:cdpVersion: 111.0.5563.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (977fecc9eed3ba2e2b979c916a4f15cb)] -&gt; xpath: //a[@href=&apos;https://www.givecentral.org/login&apos; and @class=&apos;btn btn-primary float-right btn-sm btn-mob&apos;]]
+Session ID: 977fecc9eed3ba2e2b979c916a4f15cb
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -32,11 +32,9 @@ Session ID: dc74017d74c5acf1125528f77fffb7ec
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at GIVECENTRAL1.GIVECENTRAL1.Create_Pledge.CreatePladge(Create_Pledge.java:137)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at GIVECENTRAL1.GIVECENTRAL1.GiveCentral_First.GC_First(GiveCentral_First.java:46)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)

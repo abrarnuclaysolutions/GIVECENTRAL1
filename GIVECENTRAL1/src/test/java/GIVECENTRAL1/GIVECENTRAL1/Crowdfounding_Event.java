@@ -70,6 +70,11 @@ public class Crowdfounding_Event extends BaseClass {
         WebElement clicklogin = waitoflogin
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
         clicklogin.click();
+        
+      //Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
+       
       //remove popup
         JavascriptExecutor js = (JavascriptExecutor)driver;
         Thread.sleep(5000);
@@ -120,7 +125,7 @@ public class Crowdfounding_Event extends BaseClass {
         WebElement nexttab5 = driver.findElement(By.cssSelector("#nexttab5"));
         nexttab5.click();
         //click on next
-        WebElement nexttab6 = driver.findElement(By.cssSelector("#nexttab6"));
+        WebElement nexttab6 = driver.findElement(By.cssSelector("#nexttab7"));
         nexttab6.click();
         //click on next
         WebElement nexttab7 = driver.findElement(By.cssSelector("#nexttab7"));

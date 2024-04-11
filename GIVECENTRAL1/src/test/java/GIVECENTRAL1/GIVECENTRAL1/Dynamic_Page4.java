@@ -48,6 +48,11 @@ public class Dynamic_Page4 extends BaseClass {
 		WebElement clicklogin = waitoflogin
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#logCnf")));
 		clicklogin.click();
+		
+		//Click on got it
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='driver-popover-next-btn']")).click();
+       
 		//remove popup
         Thread.sleep(5000);
         WebElement icon = driver.findElement(By.xpath("//a[@class='bottomContentLink' and @id='popup_modal_remind_later']"));
@@ -110,8 +115,8 @@ public class Dynamic_Page4 extends BaseClass {
 		WebElement cse = driver.findElement(By.xpath("//select[@id='groupMulEvent1']"));
 		// select event
 		Select st = new Select(cse);
-		st.selectByVisibleText("normal25");
-		st.selectByVisibleText("normal255");
+		st.selectByVisibleText("nodesg");
+		st.selectByVisibleText("nodesig2");
 		// add group
 		Thread.sleep(2000);
 		WebElement ag1 = driver.findElement(By.xpath("//input[@id='AddGroup']"));
@@ -126,16 +131,16 @@ public class Dynamic_Page4 extends BaseClass {
 		WebElement cse1 = driver.findElement(By.xpath("//select[@id='groupMulEvent2']"));
 		// select event
 		Select st1 = new Select(cse1);
-		st1.selectByVisibleText("normal25");
-		st1.selectByVisibleText("normal255");
+		st1.selectByVisibleText("nodesg");
+		st1.selectByVisibleText("nodesig2");
 
 		// select logo image
 		WebElement li = driver.findElement(By.xpath("//input[@id='formLogo']"));
 		js.executeScript("arguments[0].scrollIntoView();", li);
-		li.sendKeys("/Users/harendersingh/Desktop/eclipseimg.png");
+		li.sendKeys("/Users/harendersingh/Desktop/screenshotGC/Screenshot 2023-07-29 at 1.30.12 AM.png");
 		// select bg image
 		WebElement bg = driver.findElement(By.xpath("//input[@id='bgImage']"));
-		bg.sendKeys("/Users/harendersingh/Desktop/eclipseimg.png");
+		bg.sendKeys("/Users/harendersingh/Desktop/screenshotGC/Screenshot 2023-07-29 at 1.30.12 AM.png");
 		//enter title 
 		WebElement title1 = driver.findElement(By.xpath("//body/div[@id='page-container']/div[@id='wrapper']/div[@id='page-wrapper']/div[@id='content']/form[@id='dynamicFormBuilder']/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[31]/div[2]/div[1]/input[1]"));
 		js.executeScript("arguments[0].scrollIntoView();", title1);
@@ -157,80 +162,86 @@ public class Dynamic_Page4 extends BaseClass {
 		WebElement submit = driver.findElement(By.cssSelector("input[value='Submit']"));
 		js.executeScript("arguments[0].scrollIntoView();", submit);
 		submit.click();
-//		Thread.sleep(5000);
+		Thread.sleep(4000);
 //		driver.get("https://www.givecentral.org/admin/show-appeal-pages/add-new-form");
-//		//click on close
+		//click on close
 //        Thread.sleep(1000);
-//        driver.findElement(By.xpath("//body/div[@id='systemMessagesDiv']/div[1]/div[1]/div[1]/button[1]")).click();
+        driver.findElement(By.xpath("//button[@class='close' and @type='button' and @data-dismiss='modal']")).click();
 //        //copy URL
-//        driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[1]/a[1]")).click();
+        driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[1]/a[1]")).click();
 //        //close driver
 //        Thread.sleep(5000);
 //        driver.close();
         //open url
 //        op.addArguments("--remote-allow-origins=*");
-//        ChromeOptions op = new ChromeOptions();
-//		op.addArguments("--remote-allow-origins=*");
-//        op.addArguments("incognito");
-//        WebDriver driver1 = new ChromeDriver(op); 
-//        driver1.manage().window().maximize();
-//        driver1.get("https://www.givecentral.org/Unique"+data);
-//        JavascriptExecutor js1 = (JavascriptExecutor)driver1;
-//        //fill form
-//        Thread.sleep(11000);
-//        //fname
-//        WebElement fname = driver1.findElement(By.xpath("//input[@name='firstName']"));
-//        js1.executeScript("arguments[0].scrollIntoView();", fname);
-//        fname.sendKeys("abrar");
-//        //lname
-//        WebElement lname = driver1.findElement(By.xpath("//input[@name='familyLastName']"));
-//        lname.sendKeys("khan");
-//        //email
-//        driver1.findElement(By.xpath("//input[@name='email']")).sendKeys("abrar@nuclaysolutions.com");
-//        //address
-//        driver1.findElement(By.xpath("//input[@name='address']")).sendKeys("sansarpur");
-//        //state
-//        WebElement state = driver1.findElement(By.xpath("//select[@id='state']"));
-//        js1.executeScript("arguments[0].scrollIntoView();", state);
-//        Select st11 = new Select(state);
-//        st11.selectByValue("CA");
-//        //city
-//        driver1.findElement(By.xpath("//input[@name='city']")).sendKeys("saharanpur");
-//        //zip
-//        driver1.findElement(By.xpath("//input[@name='zip']")).sendKeys("12121");
-//        //amount
-//        driver1.findElement(By.xpath("//input[@name='recurr_gen_amount']")).sendKeys("0.05");
-//        //add frequency
-//        WebElement af = driver1.findElement(By.xpath("//select[@name='recurr_payment_frequency']"));
-//        Select cf = new Select(af);
-//        cf.selectByVisibleText("One-Time");
+        ChromeOptions op = new ChromeOptions();
+		op.addArguments("--remote-allow-origins=*");
+        op.addArguments("incognito");
+        WebDriver driver1 = new ChromeDriver(op); 
+        driver1.manage().window().maximize();
+        driver1.get("https://www.givecentral.org/Unique"+data);
+        JavascriptExecutor js1 = (JavascriptExecutor)driver1;
+        //fill form
+        Thread.sleep(5000);
+        //fname
+        WebElement fname = driver1.findElement(By.xpath("//input[@name='firstName']"));
+        js1.executeScript("arguments[0].scrollIntoView();", fname);
+        fname.sendKeys("abrar");
+        //lname
+        WebElement lname = driver1.findElement(By.xpath("//input[@name='familyLastName']"));
+        lname.sendKeys("khan");
+        //email
+        driver1.findElement(By.xpath("//input[@name='email']")).sendKeys("abrar@nuclaysolutions.com");
+        //address
+        driver1.findElement(By.xpath("//input[@name='address']")).sendKeys("sansarpur");
+        //state
+        WebElement state = driver1.findElement(By.xpath("//select[@id='state']"));
+        js1.executeScript("arguments[0].scrollIntoView();", state);
+        Select st11 = new Select(state);
+        st11.selectByValue("CA");
+        //city
+        driver1.findElement(By.xpath("//input[@name='city']")).sendKeys("saharanpur");
+        //zip
+        driver1.findElement(By.xpath("//input[@name='zip']")).sendKeys("12121");
+        //click on check button
+//        driver.findElement(By.xpath("//body/div[1]/div[2]/div[3]/div[1]/form[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/label[1]/span[1]")).click();
+        //amount
+        driver1.findElement(By.xpath("//body/div[1]/div[2]/div[3]/div[1]/form[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/label[2]/input[1]")).sendKeys("0.05");
+        //add frequency
+        WebElement af = driver1.findElement(By.xpath("//body/div[1]/div[2]/div[3]/div[1]/form[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/label[2]/select[1]"));
+        Select cf = new Select(af);
+        cf.selectByVisibleText("One-Time");
+        // add destination
+        WebElement des = driver1.findElement(By.xpath("//body/div[1]/div[2]/div[3]/div[1]/form[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/label[2]/select[1]"));
+        Select adddes = new Select(des);
+        adddes.selectByVisibleText("In memory of");
 //        //add parish
 //        WebElement parish = driver1.findElement(By.xpath("//select[@name='selectMultipleParishRecurr']"));
 //        js1.executeScript("arguments[0].scrollIntoView();", parish);
 //        Select par = new Select(parish);
 //        par.selectByVisibleText("Immaculate Conception Parish - 9 (106)");
-//        //name on card
-//        driver1.findElement(By.xpath("//input[@name='cc_name_on_card']")).sendKeys("Abrar");
-//        //card number
-//        driver1.findElement(By.xpath("//input[@id='cc_card_no']")).sendKeys("4242424242424242");
-//        //select month
-//        WebElement month = driver1.findElement(By.xpath("//select[@name='sel_month']"));
-//        js1.executeScript("arguments[0].scrollIntoView();", month);
-//        Select mon = new Select(month);
-//        mon.selectByVisibleText("02");
-//        //select year
-//        WebElement year = driver1.findElement(By.xpath("//select[@name='sel_year']"));
-//        Select yer = new Select(year);
-//        yer.selectByVisibleText("2025");
-//        //cvv
-//        driver1.findElement(By.xpath("//input[@id='cc_cvv']")).sendKeys("121");
-//        //zip
-//        driver1.findElement(By.xpath("//input[@id='cc_zip']")).sendKeys("12121");
-//        //submit form
-//        driver1.findElement(By.xpath("//input[@id='makePaymentBtn']")).submit();
-//		//click on submit again
-//        Thread.sleep(2000);
-//        driver1.findElement(By.xpath("//button[@class='btn btn-success']")).click();
+        //name on card
+        driver1.findElement(By.xpath("//input[@name='cc_name_on_card']")).sendKeys("Abrar");
+        //card number
+        driver1.findElement(By.xpath("//input[@id='cc_card_no']")).sendKeys("4242424242424242");
+        //select month
+        WebElement month = driver1.findElement(By.xpath("//select[@name='sel_month']"));
+        js1.executeScript("arguments[0].scrollIntoView();", month);
+        Select mon = new Select(month);
+        mon.selectByVisibleText("02");
+        //select year
+        WebElement year = driver1.findElement(By.xpath("//select[@name='sel_year']"));
+        Select yer = new Select(year);
+        yer.selectByVisibleText("2025");
+        //cvv
+        driver1.findElement(By.xpath("//input[@id='cc_cvv']")).sendKeys("121");
+        //zip
+        driver1.findElement(By.xpath("//input[@id='cc_zip']")).sendKeys("12121");
+        //submit form
+        driver1.findElement(By.xpath("//input[@id='makePaymentBtn']")).submit();
+		//click on submit again
+        Thread.sleep(2000);
+        driver1.findElement(By.xpath("//button[@class='btn btn-success']")).click();
 //        //close driver
 ////        Thread.sleep(10000);
 //        driver1.close();
